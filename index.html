@@ -8,34 +8,45 @@
 	<title>Hanne Bertelsen</title>
 </head>
 
-<section id="main">
-	<header>
-		<nav></nav>
-	</header>
-	<article id="content">
-		<section id="banner">
-		</section>
-		<section class="welcome">
-			<h1>Hanne Bertelsen</h1>
-			<img src="image/hanne_logo-light.svg" class="logo_forside" alt="Hanne´s logo i stort billed">
-
-			<ul>
-				<li><a href="om.html">Om Hanne</a> </li>
-				<li><a href="produkter.html">Produkt-Udvalg</a></li>
-				<li><a href="events.html">Events</a> </li>
-			</ul>
-
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aliquid, labore nisi, quaerat culpa dolore quas consequatur repellendus temporibus doloribus. Hic quasi recusandae quas nam alias iste at, doloremque corrupti!. </p>
-		</section>
-	</article>
-
-</section>
-<footer></footer>
-
 
 
 <body>
+	<section id="main">
+		<header>
+			<nav></nav>
+		</header>
+		<article id="content">
+			<section id="banner">
+			</section>
+			<section class="welcome">
+				<h1>Hanne Bertelsen</h1>
+				<img src="image/hanne_logo-light.svg" class="logo_forside" alt="Hanne´s logo i stort billed">
 
+				<ul>
+					<li><a href="om.html">Om Hanne</a> </li>
+					<li><a href="produkter.html">Produkt-Udvalg</a></li>
+					<li><a href="events.html">Events</a> </li>
+				</ul>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum aliquid, labore nisi, quaerat culpa dolore quas consequatur repellendus temporibus doloribus. Hic quasi recusandae quas nam alias iste at, doloremque corrupti!. </p>
+			</section>
+		</article>
+
+	</section>
+	<footer></footer>
+
+
+
+
+	<script>
+		document.addEventListener("DOMContentLoaded", HentGentagelser);
+		async function HentGentagelser() {
+
+			let footerData = await fetch("footer.html");
+			let footer = await footerData.text();
+			document.querySelector("footer").innerHTML = footer;
+		}
+	</script>
 </body>
 
 </html>
