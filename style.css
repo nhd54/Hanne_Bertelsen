@@ -1,8 +1,11 @@
 * {
 	margin: 0;
 	padding: 0;
-	color: white;
+
 }
+
+
+/********************    forside & overordnet css     **********************/
 
 #main {
 	display: grid;
@@ -30,9 +33,14 @@ header {
 #content {
 	grid-row: 2/3;
 
+}
 
-
-
+#main_content {
+	background-color: white;
+	width: 80%;
+	min-height: 40vw;
+	height: auto;
+	margin: 10vw auto;
 }
 
 .welcome {
@@ -43,8 +51,29 @@ header {
 	height: auto;
 }
 
+.logo_forside {
+	width: 20%;
+}
+
+/**********   Produkt siden *************/
+
+/***********   texture     *************/
+
 ul {
 	margin-top: 80px;
+}
+
+header ul {
+	margin-top: 0;
+
+}
+
+a {
+	color: white;
+}
+
+header li a {
+	color: black;
 }
 
 li {
@@ -57,17 +86,16 @@ li {
 h1 {
 	text-align: center;
 	font-size: 40px;
+	color: white;
 }
 
 p {
 	margin-top: 30px;
 	text-align: center;
 	width: 60%;
+	color: white;
 }
 
-.logo_forside {
-	width: 20%;
-}
 
 @media only screen and (max-width: 800px) {
 	.logo_forside {
