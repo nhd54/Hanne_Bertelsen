@@ -48,6 +48,28 @@ nav {
 	margin: 10vw auto;
 }
 
+.produkter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.event {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr;)
+}
+
+.event_billede{
+    grid-column: 1/2;
+}
+
+.beskrivelse {
+    grid-column: 2/3;
+}
 .welcome {
 	margin: 0 auto;
 	display: grid;
@@ -60,8 +82,23 @@ nav {
 	width: 20%;
 }
 
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
 
+.some {
+    grid-column: 1/2;
+}
 
+.krukke {
+    grid-column: 12/13;
+}
+
+footer ul {
+    grid-column: 2/4;
+    margin: 0;
+}
 /**********   Produkt siden *************/
 
 /***********   texture     *************/
@@ -104,6 +141,12 @@ p {
 	text-align: center;
 	width: 60%;
 	color: white;
+}
+
+.produkt, .beskrivelse p {
+    color: #000;
+    text-align:left;
+    font-size: 0.8em;
 }
 
 

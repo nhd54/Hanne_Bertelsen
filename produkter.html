@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<title></title>
+	<script src="script.js"></script>
+	<title>Produkter</title>
 </head>
 
 <body>
@@ -21,7 +22,44 @@
 			<section class="welcome"> </section>
 
 			<section id="main_content">
-
+			<div class="produkter">
+			<div class="produkt">
+                <img  src="http://placehold.it/200x150">
+			        <h2>Produkt nr 1</h2>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			</div>
+			<div class="produkt">
+                <img  src="http://placehold.it/200x150">
+			        <h2>Produkt nr 1</h2>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			</div>
+			<div class="produkt">
+                <img  src="http://placehold.it/200x150">
+			        <h2>Produkt nr 1</h2>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			</div>
+			<div class="produkt">
+                <img  src="http://placehold.it/200x150">
+			        <h2>Produkt nr 1</h2>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			        <img  src="http://placehold.it/40x40">
+			</div>
+</div>
 
 
 
@@ -30,24 +68,9 @@
 		</article>
 
 	</section>
-	<footer></footer>
+	<footer>
 
-	<script>
-		document.addEventListener("DOMContentLoaded", HentGentagelser);
-		async function HentGentagelser() {
-
-
-			let headerData = await fetch("header.html");
-			let header = await headerData.text();
-			document.querySelector("#hovedmenu").innerHTML = header;
-
-
-			let logoData = await fetch("logo.html");
-			let logo = await logoData.text();
-			document.querySelector(".welcome").innerHTML = logo;
-		}
-	</script>
-
+	</footer>
 </body>
 
 </html>
