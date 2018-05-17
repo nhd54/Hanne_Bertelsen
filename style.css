@@ -143,7 +143,7 @@ p {
 	color: white;
 }
 
-.produkt, .beskrivelse p {
+.produkt p, .beskrivelse p {
     color: #000;
     text-align:left;
     font-size: 0.8em;
