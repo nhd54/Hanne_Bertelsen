@@ -22,6 +22,11 @@ header {
 	background-color: white;
 }
 
+nav {
+	width: 50%;
+	margin: 0 auto;
+}
+
 #banner {
 	width: 100%;
 	margin-top: 2vw;
@@ -55,6 +60,8 @@ header {
 	width: 20%;
 }
 
+
+
 /**********   Produkt siden *************/
 
 /***********   texture     *************/
@@ -64,9 +71,12 @@ ul {
 }
 
 header ul {
-	margin-top: 0;
+
+	margin: 0 auto;
 
 }
+
+
 
 a {
 	color: white;
