@@ -2,75 +2,87 @@
 <html lang="">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
-	<title>Produkter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Produkter</title>
 </head>
 
 <body>
 
-	<section id="main">
-		<header id="hovedmenu">
+    <section id="main">
+        <header id="hovedmenu">
 
 
-		</header>
+        </header>
 
-		<article id="content" style="min-height:60vw;">
+        <article id="content" style="min-height:60vw;">
 
-			<section class="welcome"> </section>
+            <section class="welcome"> </section>
 
-			<section id="main_content">
-			<div class="produkter">
-			<div class="produkt">
-                <img  src="http://placehold.it/200x150">
-			        <h2>Produkt nr 1</h2>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
+            <section id="main_content">
+                <div class="produkter">
+                    <template>
+
+			<div class="produkt" data-produkt>
+
+                <div class="stortbillede"></div>
+			        <h2></h2>
+			        <div class="produkt_hidden">
+			        <p></p>
+			        <img  src="">
+			         <img  src="">
+			        <img  src="">
+			        <img  src="">
+			        </div>
 			</div>
-			<div class="produkt">
-                <img  src="http://placehold.it/200x150">
-			        <h2>Produkt nr 1</h2>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			</div>
-			<div class="produkt">
-                <img  src="http://placehold.it/200x150">
-			        <h2>Produkt nr 1</h2>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			</div>
-			<div class="produkt">
-                <img  src="http://placehold.it/200x150">
-			        <h2>Produkt nr 1</h2>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			        <img  src="http://placehold.it/40x40">
-			</div>
-</div>
+               </template>
+                </div>
+            </section>
+
+        </article>
+
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+        let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter";
+        let produkter = [];
+        let display = document.querySelector(".produkter");
+        let template = document.querySelector("template");
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let dataJson = await fetch(jsonUrl);
+            produkter = await dataJson.json();
+            console.log(produkter);
+            hentProdukter();
+        }
+
+        function hentProdukter() {
+            produkter.forEach(produkt => {
+                console.log(produkter);
+                let klon = template.cloneNode(true).content;
+                console.log(klon);
+                klon.querySelector("h2").innerHTML = produkt.title.rendered;
+                klon.querySelector(".stortbillede").innerHTML = '<img src="' + produkt.better_featured_image.media_details.sizes.medium.source_url + ' " />';
+                klon.querySelector("p").innerHTML = produkt.content.rendered;
+
+                klon.querySelector(".produkt").addEventListener("click", () => {
+                    location.href = "produkt.html?produkt=" + produkt.id;
+                });
 
 
 
-			</section>
+                display.appendChild(klon);
+            })
 
-		</article>
-
-	</section>
-	<footer>
-
-	</footer>
+        }
+    </script>
 </body>
 
 </html>
