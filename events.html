@@ -2,77 +2,80 @@
 <html lang="">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
-	<title>Events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Events</title>
 </head>
 
 <body>
-<section id="main">
-		<header id="hovedmenu">
+    <section id="main">
+        <header id="hovedmenu">
 
 
-		</header>
+        </header>
 
-		<article id="content" style="min-height:60vw;">
+        <article id="content" style="min-height:60vw;">
 
-			<section class="welcome"> </section>
+            <section class="welcome"> </section>
 
-			<section id="main_content">
-			<div class="events">
-            <div class="event">
-               <div class="event_billede">
-                    <img  src="http://placehold.it/400x200">
+            <section id="main_content">
+                <div class="events">
+                    <template>
+                    <div class="event">
+                        <div class="event_billede">
+
+                        </div>
+                        <div class="beskrivelse">
+                            <h2></h2>
+                            <p></p>
+                        </div>
+
+                    </div>
+                    </template>
                 </div>
-                <div class="beskrivelse">
-			        <h2>Produkt nr 1</h2>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
-			     </div>
-
-			</div>
-			<div class="event">
-               <div class="event_billede">
-                    <img  src="http://placehold.it/400x200">
-                </div>
-                <div class="beskrivelse">
-			        <h2>Produkt nr 1</h2>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
-			     </div>
-			</div>
-			<div class="event">
-               <div class="event_billede">
-                    <img  src="http://placehold.it/400x200">
-                </div>
-                <div class="beskrivelse">
-			        <h2>Produkt nr 1</h2>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
-			     </div>
-
-			</div>
-			<div class="event">
-               <div class="event_billede">
-                    <img  src="http://placehold.it/400x200">
-                </div>
-                <div class="beskrivelse">
-			        <h2>Produkt nr 1</h2>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum maiores dolorem, autem animi, quis libero cum consequuntur, ipsum dolor labore est. Nostrum facilis maiores debitis optio ipsam soluta expedita aliquid!</p>
-			     </div>
-
-			</div>
-</div>
 
 
 
-			</section>
+            </section>
 
-		</article>
+        </article>
 
-	</section>
+    </section>
 
-	<footer>
+    <footer>
 
-	</footer>
+    </footer>
+    <script>
+        let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/events";
+        let events = [];
+        let display = document.querySelector(".events");
+        let template = document.querySelector("template");
+
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        async function hentJson() {
+            let dataJson = await fetch(jsonUrl);
+            events = await dataJson.json();
+            console.log(events);
+            hentEvents();
+        }
+
+        function hentEvents() {
+            events.forEach(event => {
+                console.log(events);
+                let klon = template.cloneNode(true).content;
+                console.log(klon);
+                klon.querySelector("h2").innerHTML = event.title.rendered;
+                klon.querySelector(".event_billede").innerHTML = '<img src="' + event.better_featured_image.media_details.sizes.medium.source_url + ' " />';
+                klon.querySelector("p").innerHTML = event.content.rendered;
+
+                display.appendChild(klon);
+            })
+
+        }
+    </script>
 </body>
+
 </html>
