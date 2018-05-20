@@ -2,28 +2,28 @@
 <html lang="">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Produkter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<title>Produkter</title>
 </head>
 
 <body>
 
-    <section id="main">
-        <header id="hovedmenu">
+	<section id="main">
+		<header id="hovedmenu">
 
 
-        </header>
+		</header>
 
-        <article id="content" style="min-height:60vw;">
+		<article id="content" style="min-height:60vw;">
 
-            <section class="welcome"> </section>
+			<section class="welcome"> </section>
 
-            <section id="main_content">
-                <div class="produkter">
-                    <template>
+			<section id="main_content">
+				<div class="produkter">
+					<template>
 
 			<div class="produkt" data-produkt>
 
@@ -38,51 +38,51 @@
 			        </div>
 			</div>
                </template>
-                </div>
-            </section>
+				</div>
+			</section>
 
-        </article>
+		</article>
 
-    </section>
-    <footer>
+	</section>
+	<footer>
 
-    </footer>
+	</footer>
 
-    <script>
-        let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter";
-        let produkter = [];
-        let display = document.querySelector(".produkter");
-        let template = document.querySelector("template");
+	<script>
+		let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter?per_page=100";
+		let produkter = [];
+		let display = document.querySelector(".produkter");
+		let template = document.querySelector("template");
 
-        document.addEventListener("DOMContentLoaded", hentJson);
+		document.addEventListener("DOMContentLoaded", hentJson);
 
-        async function hentJson() {
-            let dataJson = await fetch(jsonUrl);
-            produkter = await dataJson.json();
-            console.log(produkter);
-            hentProdukter();
-        }
+		async function hentJson() {
+			let dataJson = await fetch(jsonUrl);
+			produkter = await dataJson.json();
+			console.log(produkter);
+			hentProdukter();
+		}
 
-        function hentProdukter() {
-            produkter.forEach(produkt => {
-                console.log(produkter);
-                let klon = template.cloneNode(true).content;
-                console.log(klon);
-                klon.querySelector("h2").innerHTML = produkt.title.rendered;
-                klon.querySelector(".stortbillede").innerHTML = '<img src="' + produkt.better_featured_image.media_details.sizes.medium.source_url + ' " />';
-                klon.querySelector("p").innerHTML = produkt.content.rendered;
+		function hentProdukter() {
+			produkter.forEach(produkt => {
+				console.log(produkter);
+				let klon = template.cloneNode(true).content;
+				console.log(klon);
+				klon.querySelector("h2").innerHTML = produkt.title.rendered;
+				klon.querySelector(".stortbillede").innerHTML = '<img src="' + produkt.better_featured_image.media_details.sizes.medium.source_url + ' " />';
+				klon.querySelector("p").innerHTML = produkt.content.rendered;
 
-                klon.querySelector(".produkt").addEventListener("click", () => {
-                    location.href = "produkt.html?produkt=" + produkt.id;
-                });
+				klon.querySelector(".produkt").addEventListener("click", () => {
+					location.href = "produkt.html?produkt=" + produkt.id;
+				});
 
 
 
-                display.appendChild(klon);
-            })
+				display.appendChild(klon);
+			})
 
-        }
-    </script>
+		}
+	</script>
 </body>
 
 </html>
