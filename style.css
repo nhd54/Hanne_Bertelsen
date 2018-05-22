@@ -22,12 +22,15 @@
 header {
 	grid-row: 1/2;
 	width: 100%;
-	background-color: white;
+	background-color: #e4e2e3;
+	display: grid;
+	grid-template-columns: repeat (12, 1fr)
 }
 
 nav {
-	width: 50%;
-	margin: 0 auto;
+
+
+	grid-column: 4/ span 8;
 }
 
 #banner {
@@ -44,7 +47,7 @@ nav {
 }
 
 #main_content {
-	background-color: white;
+	background-color: #e4e2e3;
 	width: 80%;
 	min-height: 40vw;
 	height: auto;
@@ -133,13 +136,19 @@ nav {
 	height: auto;
 }
 
-.logo_forside {
+.logo_forsiden {
 	width: 20%;
+}
+
+.logo_forside {
+	width: 100%;
 }
 
 footer {
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat(12, 8%);
+	grid-gap: 0.37%;
+	background-color: #e4e2e3;
 }
 
 .some {
@@ -187,7 +196,7 @@ footer ul {
 	grid-column: span 6;
 	color: black;
 	width: 100%;
-	margin: 0;
+	margin-top: 15px;
 }
 
 .citat {
@@ -231,7 +240,7 @@ ul {
 
 header ul {
 
-	margin: 0 auto;
+	margin: 15px auto;
 
 }
 
@@ -247,7 +256,7 @@ header li a {
 
 li {
 	display: inline;
-	margin: 40px;
+	margin: 75px;
 	font-size: 20px;
 	font-weight: 800;
 }
@@ -377,4 +386,22 @@ p {
 		width: 92%;
 		margin: 5px;
 	}
+}
+
+.logo_header {
+	width: 20%;
+	grid-column: span 2;
+	margin-top: 5px;
+}
+
+
+
+hr {
+
+
+     background: black;
+     width: 100%%;
+     height: 0.5px;
+	grid-column: 3 / span 8
+
 }
