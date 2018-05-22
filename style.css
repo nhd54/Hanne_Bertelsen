@@ -55,12 +55,13 @@ nav {
 .produkter {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
 }
 
 .produkt {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	justify-items: center;
+
 }
 
 .enkelt_produkt {
@@ -80,13 +81,20 @@ nav {
 }
 
 .stortbillede {
-	grid-column: 1/4;
+	grid-column: span 3;
 }
+
+.stortbillede img {
+	width: 100%;
+	height: 200px;
+}
+
 
 .lille_billede1 img,
 .lille_billede2 img,
 .lille_billede3 img {
-	width: 10vw;
+	width: 100%;
+	height: 200px;
 }
 
 .kategori a {
@@ -194,7 +202,14 @@ footer ul {
 
 
 
-.sted {}
+
+
+/********* kontakt ***************/
+
+.map {
+	grid-column: span 12;
+	width: 100%;
+}
 
 /**********   Produkt siden *************/
 
@@ -241,6 +256,12 @@ h1 {
 	text-align: center;
 	font-size: 40px;
 	color: white;
+}
+
+.overskrift_om {
+	grid-column: span 12;
+	color: black;
+	font-size: 30px;
 }
 
 .produkt h2 {
@@ -332,4 +353,28 @@ p {
 
 	}
 
+	.enkelt_produkt .produkt {
+		grid-column: span 3;
+
+	}
+
+	.stortbillede {
+		grid-column: span 3;
+	}
+
+	.stortbillede img {
+		width: 100%;
+	}
+
+	.produkt p {
+		margin: 10px;
+	}
+
+	.lille_billede1 img,
+	.lille_billede2 img,
+	.lille_billede3 img {
+		grid-column: span 1;
+		width: 92%;
+		margin: 5px;
+	}
 }
