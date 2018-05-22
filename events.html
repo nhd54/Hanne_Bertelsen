@@ -2,27 +2,29 @@
 <html lang="">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Events</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<title>Events</title>
 </head>
 
 <body>
-    <section id="main">
-        <header id="hovedmenu">
+	<section id="main">
+		<header id="hovedmenu">
 
 
-        </header>
+		</header>
 
-        <article id="content" style="min-height:60vw;">
+		<article id="content">
 
-            <section class="welcome"> </section>
+			<section class="welcome"> </section>
 
-            <section id="main_content">
-                <div class="events">
-                    <template>
+			<section id="main_content">
+				<h1>Events</h1>
+				<hr>
+				<div class="events">
+					<template>
                     <div class="event">
                         <div class="event_billede">
 
@@ -31,51 +33,56 @@
                             <h2></h2>
                             <p></p>
                         </div>
-
+                    <br>
+					<hr>
+                   <br>
                     </div>
+
+
                     </template>
-                </div>
+				</div>
 
 
 
-            </section>
+			</section>
 
-        </article>
+		</article>
 
-    </section>
+	</section>
 
-    <footer>
+	<footer>
 
-    </footer>
-    <script>
-        let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/events";
-        let events = [];
-        let display = document.querySelector(".events");
-        let template = document.querySelector("template");
+	</footer>
+	<script>
+		let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/events";
+		let events = [];
+		let display = document.querySelector(".events");
+		let template = document.querySelector("template");
 
-        document.addEventListener("DOMContentLoaded", hentJson);
+		document.addEventListener("DOMContentLoaded", hentJson);
 
-        async function hentJson() {
-            let dataJson = await fetch(jsonUrl);
-            events = await dataJson.json();
-            console.log(events);
-            hentEvents();
-        }
+		async function hentJson() {
+			let dataJson = await fetch(jsonUrl);
+			events = await dataJson.json();
+			console.log(events);
+			hentEvents();
+		}
 
-        function hentEvents() {
-            events.forEach(event => {
-                console.log(events);
-                let klon = template.cloneNode(true).content;
-                console.log(klon);
-                klon.querySelector("h2").innerHTML = event.title.rendered;
-                klon.querySelector(".event_billede").innerHTML = '<img src="' + event.better_featured_image.media_details.sizes.medium.source_url + ' " />';
-                klon.querySelector("p").innerHTML = event.content.rendered;
+		function hentEvents() {
+			events.forEach(event => {
+				console.log(events);
+				let klon = template.cloneNode(true).content;
+				console.log(klon);
+				klon.querySelector("h2").innerHTML = event.title.rendered;
+				klon.querySelector(".event_billede").innerHTML = '<img src="' + event.better_featured_image.media_details.sizes.medium.source_url + ' " />';
+				klon.querySelector("p").innerHTML = event.content.rendered;
 
-                display.appendChild(klon);
-            })
+				display.appendChild(klon);
+			})
 
-        }
-    </script>
+		}
+
+	</script>
 </body>
 
 </html>
