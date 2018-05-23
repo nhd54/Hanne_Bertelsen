@@ -1,8 +1,16 @@
+@font-face {
+	font-family: bookman;
+	src: url(BOKOS.woff2);
+}
+
 * {
 	margin: 0;
 	padding: 0;
-
+	font-family: 'bookman', Calibri, Candara, Segoe, Segoe UI, Optima, Arial;
+	text-decoration: none;
 }
+
+
 
 
 /********************    forside & overordnet css     **********************/
@@ -22,6 +30,7 @@
 header {
 	grid-row: 1/2;
 	width: 100%;
+	height: 35px;
 	background-color: #e4e2e3;
 	display: grid;
 	grid-template-columns: repeat (12, 1fr);
@@ -151,14 +160,24 @@ footer {
 	grid-template-columns: repeat(12, 8%);
 	grid-gap: 0.37%;
 	background-color: #e4e2e3;
+
+}
+
+footer a {
+	color: black;
 }
 
 .some {
 	grid-column: 1/2;
 }
 
+.some img {
+	margin: 5%;
+	width: 35%
+}
+
 .krukke {
-	grid-column: 12/13;
+	grid-column: 11/12;
 }
 
 footer ul {
@@ -223,6 +242,28 @@ footer ul {
 
 }
 
+.logo_header {
+	width: 20%;
+	grid-column: span 2;
+
+}
+
+
+
+hr {
+
+
+	background: black;
+	width: 100%%;
+	height: 0.5px;
+	grid-column: 3 / span 8;
+	margin: 15px 0;
+}
+
+.footermenu {
+	margin: 5%;
+	text-decoration: none;
+}
 
 
 
@@ -255,12 +296,14 @@ ul {
 
 header ul {
 
-	margin: 15px auto;
+	margin: 0 auto;
 
 }
 
 .butik_text p {
 	color: black;
+	font-family: 'bookman';
+	font-weight: 500;
 }
 
 a {
@@ -316,6 +359,7 @@ p {
 	text-align: center;
 	width: 60%;
 	color: white;
+
 }
 
 .butik_text p,
@@ -409,6 +453,32 @@ h2 {
 
 
 	}
+	.some {
+		grid-column: span 3;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.some img {
+		width: 100%;
+		grid-column: span 1;
+	}
+
+	.footermenu {
+		grid-column: 5/6;
+		margin: 70%;
+
+	}
+
+	.footermenu a {}
+	.event_billede {
+		grid-column: span 12;
+
+	}
+
+	.beskrivelse {
+		grid-column: span 10;
+	}
 
 	.enkelt_produkt .produkt {
 		grid-column: span 3;
@@ -427,6 +497,11 @@ h2 {
 		margin: 10px;
 	}
 
+	.produkt_hidden p {
+		width: 90%;
+
+	}
+
 	.lille_billede1 img,
 	.lille_billede2 img,
 	.lille_billede3 img {
@@ -434,21 +509,9 @@ h2 {
 		width: 92%;
 		margin: 5px;
 	}
-}
 
-.logo_header {
-	width: 20%;
-	grid-column: span 2;
-	margin-top: 5px;
-}
-
-
-
-hr {
-
-
-	background: black;
-	width: 100%%;
-	height: 0.5px;
-	grid-column: 3 / span 8
+	.krukke {
+		grid-column: 9/12;
+		margin-top: 10px;
+	}
 }

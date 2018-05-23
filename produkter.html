@@ -66,11 +66,13 @@
 		function hentProdukter() {
 			produkter.forEach(produkt => {
 				console.log(produkter);
+				let str = produkt.content.rendered;
+				let rest = str.substr(0, 90)
 				let klon = template.cloneNode(true).content;
 				console.log(klon);
 				klon.querySelector("h2").innerHTML = produkt.title.rendered;
 				klon.querySelector(".stortbillede").innerHTML = '<img src="' + produkt.better_featured_image.media_details.sizes.medium.source_url + ' " />';
-				klon.querySelector("p").innerHTML = produkt.content.rendered;
+				klon.querySelector("p").innerHTML = rest + "...";
 
 				klon.querySelector(".produkt").addEventListener("click", () => {
 					location.href = "produkt.html?produkt=" + produkt.id;
@@ -82,6 +84,7 @@
 			})
 
 		}
+
 	</script>
 </body>
 
