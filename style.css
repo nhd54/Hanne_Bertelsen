@@ -38,9 +38,59 @@ header {
 }
 
 nav {
-
-
 	grid-column: 4/ span 8;
+}
+
+.om_slidedown {
+	display: none;
+	width: 15%;
+	position: absolute;
+	border-radius: 10%;
+	text-align: center;
+	background-color: #e4e2e3;
+}
+
+.produktudvalg {
+	display: none;
+	width: 15vw;
+	position: absolute;
+	border-radius: 10%;
+	text-align: center;
+	background-color: #e4e2e3;
+	margin-left: 18%;
+}
+
+.produktudvalg li {
+	display: block;
+	margin: 20px;
+	border-bottom: 1px solid black;
+}
+
+.forside_produkt:hover .produktudvalg {
+	display: block;
+}
+
+.vis_produkt:hover .produktudvalg {
+	display: block;
+}
+
+.om:hover .om_slidedown {
+	display: block;
+}
+
+.forside_om:hover .om_slidedown {
+	display: block;
+}
+
+.om_slidedown li {
+	display: block;
+	margin: 20px;
+	border-bottom: 1px solid black;
+
+}
+
+.forside_om ul {
+	margin: 0;
 }
 
 #banner {
@@ -68,6 +118,8 @@ nav {
 .produkter {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+
+	grid-template-rows: 10% auto;
 	grid-gap: 10px;
 }
 
@@ -77,9 +129,18 @@ nav {
 
 }
 
-.enkelt_produkt {
+
+
+.produkt_ikon {
+	grid-column: span 3;
+	grid-row: 1/2;
 	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+}
+
+.produkt_ikon img {
+	width: 20%;
 }
 
 .enkelt_produkt .produkt {
@@ -100,6 +161,9 @@ nav {
 .stortbillede img {
 	width: 100%;
 	height: 200px;
+	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -108,6 +172,9 @@ nav {
 .lille_billede3 img {
 	width: 100%;
 	height: 200px;
+	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
 }
 
 .kategori a {
@@ -135,6 +202,12 @@ nav {
 	grid-column: span 5;
 }
 
+.event_billede img {
+	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+}
+
 .beskrivelse {
 	grid-column: span 5;
 }
@@ -145,6 +218,14 @@ nav {
 	justify-items: center;
 	width: 55%;
 	height: auto;
+}
+
+.welcome ul {
+	margin-top: 0;
+}
+
+.om_slidedown a {
+	color: black;
 }
 
 .logo_forsiden {
@@ -199,12 +280,18 @@ footer ul {
 	grid-column: span 4;
 	width: 100%;
 	margin: 10px 0;
+	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
 }
 
 .butik_stort {
 	grid-column: span 6;
 	width: 100%;
 	margin: 30px 0;
+	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
 
 }
 
@@ -212,8 +299,17 @@ footer ul {
 	grid-column: span 2;
 	width: 100%;
 	height: 250px;
+	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
 
 
+
+}
+
+.icon_produkt {
+	width: 50%;
+	grid-column: 2/3;
 
 }
 
@@ -274,6 +370,9 @@ hr {
 .map {
 	grid-column: span 12;
 	width: 100%;
+	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
 }
 
 /**********   Produkt siden *************/
@@ -286,7 +385,12 @@ hr {
 	grid-column: span 3;
 }
 
-.enkelt_produkt p {}
+.enkelt_produkt {
+	width: 60%;
+	margin: 0 auto;
+}
+
+
 
 /***********   texture     *************/
 
@@ -379,7 +483,8 @@ h2 {
 
 @media only screen and (max-width: 800px) {
 	.logo_forside {
-		width: 50%;
+		width: 65%;
+		margin-left: 15%;
 	}
 
 	ul {
@@ -426,6 +531,10 @@ h2 {
 		height: 250px;
 	}
 
+	.produkt {
+		grid-column: span 3;
+	}
+
 	.produkter {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
@@ -464,6 +573,8 @@ h2 {
 		grid-column: span 1;
 	}
 
+
+
 	.footermenu {
 		grid-column: 5/6;
 		margin: 70%;
@@ -473,12 +584,20 @@ h2 {
 	.footermenu a {}
 	.event_billede {
 		grid-column: span 12;
+		-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+		box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
 
 	}
 
 	.beskrivelse {
 		grid-column: span 10;
 	}
+	.enkelt_produkt {
+		width: 100%;
+		margin: 0 auto;
+	}
+
 
 	.enkelt_produkt .produkt {
 		grid-column: span 3;
@@ -491,10 +610,22 @@ h2 {
 
 	.stortbillede img {
 		width: 100%;
+
 	}
+
+	.icon_produkt {
+		width: 50%;
+		grid-column: span 1;
+
+	}
+
 
 	.produkt p {
 		margin: 10px;
+	}
+
+	.produkt img {
+		grid-column: span 1;
 	}
 
 	.produkt_hidden p {
@@ -508,6 +639,7 @@ h2 {
 		grid-column: span 1;
 		width: 92%;
 		margin: 5px;
+
 	}
 
 	.krukke {
