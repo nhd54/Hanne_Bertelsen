@@ -15,7 +15,7 @@
 
 /********************    forside & overordnet css     **********************/
 
-#main {
+#wrapper {
 	display: grid;
 	grid-template-rows: 4vw auto 10vw;
 	width: 100%;
@@ -66,8 +66,26 @@ nav {
 	border-bottom: 1px solid black;
 }
 
-.forside_produkt:hover .produktudvalg {
-	display: block;
+
+
+@media only screen and (min-width: 800px) {
+	.forside_produkt:hover .produktudvalg {
+		display: block;
+	}
+
+	.forside_om:hover .om_slidedown {
+		display: block;
+	}
+
+	.produktudvalg a {
+		color: black;
+	}
+}
+
+#normalMenu {
+
+	display: none;
+
 }
 
 .vis_produkt:hover .produktudvalg {
@@ -78,9 +96,7 @@ nav {
 	display: block;
 }
 
-.forside_om:hover .om_slidedown {
-	display: block;
-}
+
 
 .om_slidedown li {
 	display: block;
@@ -480,8 +496,14 @@ h2 {
 
 }
 
+headermenu {
+	display: block;
+}
 
 @media only screen and (max-width: 800px) {
+	#headermenu {
+		display: none;
+	}
 	.logo_forside {
 		width: 65%;
 		margin-left: 15%;
@@ -496,6 +518,91 @@ h2 {
 		margin: 34px;
 		font-size: 20px;
 		font-weight: 800;
+	}
+
+	nav {
+		display: none;
+	}
+
+	nav {
+		grid-column: span 12;
+	}
+
+	#normalMenu {
+		display: none;
+		background-color: black;
+		margin-top: 5%;
+	}
+
+	#normalMenu button {
+		text-decoration: none;
+		border: none;
+		z-index: 7;
+		border-bottom: 1px solid #2b3940;
+		display: block;
+		background-color: transparent;
+		padding: 4px;
+		width: 100%;
+		color: #EDE5DF;
+		font-family: 'HKGrotesk';
+		font-size: 1.5em;
+		cursor: pointer;
+	}
+
+	.logo_header {
+		display: none;
+	}
+
+	.MenuBackdrop {
+		position: fixed;
+		width: 100vw;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -1;
+	}
+
+	.accordion {
+		text-align: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		color: #444;
+		cursor: pointer;
+		margin: 2vw;
+		padding: 2vw;
+		background-color: #3d5566;
+		height: 30px;
+		width: 30px;
+		text-align: left;
+		border-radius: 5px;
+		outline: none;
+		transition: 0.4s;
+		z-index: 10;
+	}
+
+
+	.bar1,
+	.bar2,
+	.bar3 {
+		width: 30px;
+		height: 3px;
+		background-color: #EDE5DF;
+		margin: 6px 0;
+		transition: 0.4s;
+	}
+
+	.change .bar1 {
+		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		transform: rotate(-45deg) translate(-9px, 6px);
+	}
+
+	.change .bar2 {
+		opacity: 0;
+	}
+
+	.change .bar3 {
+		-webkit-transform: rotate(45deg) translate(-8px, -8px);
+		transform: rotate(45deg) translate(-8px, -8px);
 	}
 
 	p {
@@ -516,7 +623,7 @@ h2 {
 	}
 
 	header {
-		display: none;
+		background-color: transparent;
 	}
 
 	.small_img {

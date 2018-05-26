@@ -11,7 +11,7 @@
 
 <body>
 
-	<section id="main">
+	<section id="wrapper">
 		<header id="hovedmenu">
 
 
@@ -64,16 +64,17 @@
 		async function hentJson() {
 			let dataJson = await fetch(jsonUrl);
 			produkter = await dataJson.json();
-			console.log(produkter);
-			hentProdukter();
+			lavfiltre();
 		}
 
-		function hentProdukter() {
+		function hentProdukter(produkter) {
 			produkter.forEach(produkt => {
 				console.log(produkter);
+
 				let str = produkt.content.rendered;
 				let rest = str.substr(0, 90)
 				let klon = template.cloneNode(true).content;
+
 				console.log(klon);
 				klon.querySelector("h2").innerHTML = produkt.title.rendered;
 				klon.querySelector(".stortbillede").innerHTML = '<img src="' + produkt.better_featured_image.media_details.sizes.medium.source_url + ' " />';
@@ -86,8 +87,59 @@
 
 
 				display.appendChild(klon);
+
 			})
 
+
+		}
+
+
+		function lavfiltre() {
+			let urlParams = new URLSearchParams(window.location.search);
+			let urlid = urlParams.get("kategori");
+
+			console.log(urlid);
+
+
+			let vase = produkter.filter(produkt => produkt.acf.kategori == "vase");
+			let potter = produkter.filter(produkt => produkt.acf.kategori == "Potter");
+			let skaale = produkter.filter(produkt => produkt.acf.kategori == "Skåle");
+			let fade = produkter.filter(produkt => produkt.acf.kategori == "Fade");
+			let lamper = produkter.filter(produkt => produkt.acf.kategori == "Lamper");
+			let lysestager = produkter.filter(produkt => produkt.acf.kategori == "Lysestager");
+			console.log(lysestager);
+
+			let single = produkter.find(produkt => {
+				if (urlid == "vase") {
+					console.log("jeg er alle");
+
+
+				} else if (urlid == "potter") {
+					console.log("jeg er forretter");
+					display.innerHTML = "";
+					hentProdukter(potter);
+				} else if (urlid == "skåle") {
+					console.log("jeg er skåle");
+					display.innerHTML = "";
+					hentProdukter(skaale);
+				} else if (urlid == "fade") {
+					console.log("jeg er fade");
+					display.innerHTML = "";
+					hentProdukter(fade);
+				} else if (urlid == "lamper") {
+					console.log("alle lamperne");
+					display.innerHTML = "";
+					hentProdukter(lamper);
+				} else if (urlid == "lysestager") {
+					console.log("jeg er drikkevarer");
+					display.innerHTML = "";
+					hentProdukter(lysestager);
+				} else {
+					console.log("jeg viser alle produkter");
+					hentProdukter(produkter);
+
+				}
+			});
 		}
 	</script>
 </body>

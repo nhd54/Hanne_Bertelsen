@@ -11,12 +11,30 @@
 
 
 <body>
-	<section id="main">
+	<section id="wrapper">
 		<header>
-			<nav></nav>
+			<div class="accordion">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+
+
+			<nav id="normalMenu">
+				<div class="MenuBackdrop"> </div>
+				<div class="buttons">
+					<a href="nyheder.html"><button class="buttonnews">Nyheder</button></a>
+					<a href="restauranter.html"><button class="buttonres">Restauranter</button></a>
+					<a href="delikatesser.html"><button class="buttondeli">Delikatesser</button></a>
+					<a href="inspirationer.html"><button class="buttoninsp">Inspiration</button></a>
+
+				</div>
+			</nav>
+
 		</header>
 		<article id="content">
 			<section id="banner">
+
 			</section>
 			<section class="welcome">
 				<h1>Hanne Bertelsen</h1>
@@ -41,12 +59,24 @@
 					</li>
 					<li class="forside_produkt"><a href="produkter.html">Produkt-Udvalg</a>
 						<ul class="produktudvalg">
-							<li>Vase</li>
-							<li>potter</li>
-							<li>skåle</li>
-							<li>fade</li>
-							<li>lamper</li>
-							<li>lysestager</li>
+							<a href="produkter.html?kategori=vase">
+								<li>Vase</li>
+							</a>
+							<a href="produkter.html?kategori=potter">
+								<li>potter</li>
+							</a>
+							<a href="produkter.html?kategori=skåle">
+								<li>skåle</li>
+							</a>
+							<a href="produkter.html?kategori=fade">
+								<li>fade</li>
+							</a>
+							<a href="produkter.html?kategori=lamper">
+								<li>lamper</li>
+							</a>
+							<a href="produkter.html?kategori=lysestager">
+								<li>lysestager</li>
+							</a>
 						</ul>
 					</li>
 					<li><a href="events.html">Events</a> </li>
@@ -69,7 +99,22 @@
 			let footerData = await fetch("footer.html");
 			let footer = await footerData.text();
 			document.querySelector("footer").innerHTML = footer;
+
+			let acc = document.getElementsByClassName("accordion");
+			var i;
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					let panel = this.nextElementSibling;
+					if (panel.style.display === "inline-block") {
+						panel.style.display = "none";
+					} else {
+						panel.style.display = "inline-block";
+					}
+				});
+			}
 		}
+
 	</script>
 </body>
 
