@@ -27,9 +27,11 @@
 					<template>
                     <div class="produkt">
                        <img class="stortbillede">
-                        <img class="lille_billede1">
-			         <img class="lille_billede2">
-			         <img class="lille_billede3">
+
+
+						<img class="billede1">
+			         <img class="billede2">
+			         <img class="billede3">
 
 
                         <h2 class="produkt_overskrift"></h2>
@@ -84,9 +86,9 @@
 					console.log(klon);
 					klon.querySelector("h2").innerHTML = enkelt_produkt.title.rendered;
 					klon.querySelector(".stortbillede").src = enkelt_produkt.better_featured_image.media_details.sizes.medium.source_url;
-					klon.querySelector(".lille_billede1").src = enkelt_produkt.acf.billede1.url;
-					klon.querySelector(".lille_billede2").src = enkelt_produkt.acf.billede2.url;
-					klon.querySelector(".lille_billede3").src = enkelt_produkt.acf.billede3.url;
+					klon.querySelector(".billede1").src = enkelt_produkt.acf.billede1.url;
+					klon.querySelector(".billede2").src = enkelt_produkt.acf.billede2.url;
+					klon.querySelector(".billede3").src = enkelt_produkt.acf.billede3.url;
 					klon.querySelector("p").innerHTML = enkelt_produkt.content.rendered;
 					klon.querySelector(".kategori").innerHTML = "kategori: <br>" + enkelt_produkt.acf.kategori;
 					klon.querySelector(".farve").innerHTML = "farve: <br>" + enkelt_produkt.acf.farve;
