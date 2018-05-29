@@ -5,8 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="script.js"></script>
+
 	<title>Produkter</title>
 </head>
 
@@ -31,22 +33,29 @@
 					</div>
 					<template>
 
-			<div class="produkt" data-produkt>
 
-
-			        <h2></h2>
-			         <img class="stortbillede">
-			        <div class="produkt_hidden">
-			        <p></p>
-
-
-			         <img class="lille_billede1 do_something">
-			         <img class="lille_billede2 do_something">
-			         <img class="lille_billede3 do_something">
-
-
-			        </div>
+		<div class="produkt" data-produkt>
+			<h2></h2>
+			<img class="stortbillede">
+			<div class="produkt_hidden">
+				<p></p>
+				<div class="image-wrapper">
+					<img class="lille_billede1 do_something" alt="food">
+					<img class="lille_billede2 do_something" alt="food">
+					<img class="lille_billede3 do_something" alt="food">
+				</div>
 			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
                </template>
 				</div>
 			</section>
@@ -77,17 +86,14 @@
 
 
 
-			$('.produkt').find('.do_something').each(function() {
-
-				$('.do_something').mouseenter(function() {
-
-					var billedenavn = $(this).attr("src");
-
-					$('img').parent('.produkt_hidden').parent('.produkt').children('img').attr('src', billedenavn);
-
-				});
-
-			});
+			$('.do_something').on('mouseenter', function() {
+				var imagePath = 'http://www.designstorm.dk/kea/2-semester-eksamen/wordpress/wp-content/uploads/2018/05/'; // change your path to 'image/'
+				var imageSource = $(this).attr('src');
+				console.log(imageSource);
+				var imagePathAndFilename = imageSource.lastIndexOf("/") + 1;
+				var imageFilename = imageSource.substr(imagePathAndFilename);
+				$(this).closest('.produkt').find('.stortbillede').attr('src', imagePath + imageFilename);
+			})
 
 
 		}

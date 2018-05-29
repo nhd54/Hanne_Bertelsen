@@ -113,10 +113,10 @@ nav {
 	width: 100%;
 	margin-top: 2vw;
 	height: 30vw;
-	background-color: #708ba3;
+
 	display: grid;
-	grid-template-columns: repeat(12, 8%);
-	grid-gap: 0.7%;
+	grid-template-columns: repeat(12, 8.33%);
+
 }
 
 
@@ -154,6 +154,26 @@ nav {
 	display: none;
 
 }
+
+
+.do_something {
+	cursor: pointer;
+}
+
+img.stortbillede {
+	max-width: 100%;
+}
+
+.image-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.image-wrapper img {
+	margin: 2px;
+}
+
 
 .produkt:hover .produkt_hidden {
 	display: block;
@@ -767,6 +787,6 @@ headermenu {
 }
 
 .slideshow-container {
-	grid-column: 3/ span 6;
+	grid-column: 1/ span 12;
 
 }
