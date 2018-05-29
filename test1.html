@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.do_something {
+			cursor: pointer;
+		}
+
+		img.stortbillede {
+			max-width: 100%;
+		}
+
+		.image-wrapper {
+			display: flex;
+			justify-content: space-evenly;
+			width: 100%;
+		}
+
+		.image-wrapper img {
+			margin: 2px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<div id="test">
+		<div class="produkt">
+			<h2>overskrift</h2>
+			<img class="stortbillede" src="https://i.imgur.com/Wu4mf2zb.jpg">
+			<div class="produkt_hidden">
+				<p>Lorem ipsum dolor sit amet,</p>
+				<div class="image-wrapper">
+					<img class="lille_billede1 do_something" src="https://i.imgur.com/Wu4mf2zb.jpg" alt="food">
+					<img class="lille_billede2 do_something" src="https://i.imgur.com/NN36yEMb.jpg" alt="food">
+					<img class="lille_billede3 do_something" src="https://i.imgur.com/KDTD5wjb.jpg" alt="food">
+				</div>
+			</div>
+		</div>
+		<div class="produkt">
+			<h2>overskrift</h2>
+			<img class="stortbillede" src="https://i.imgur.com/NN36yEMb.jpg">
+			<div class="produkt_hidden">
+				<p>Lorem ipsum dolor sit amet,</p>
+				<div class="image-wrapper">
+					<img class="lille_billede1 do_something" src="https://i.imgur.com/Wu4mf2zb.jpg" alt="food">
+					<img class="lille_billede2 do_something" src="https://i.imgur.com/NN36yEMb.jpg" alt="food">
+					<img class="lille_billede3 do_something" src="https://i.imgur.com/KDTD5wjb.jpg" alt="food">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$('.do_something').on('mouseenter', function() {
+			var name = $(this).closest('.produkt').find('.stortbillede').attr("src");
+			var imagePath = 'https://i.imgur.com/'; // change your path to 'image/'
+			var imageSource = $(this).attr('src');
+			var imagePathAndFilename = imageSource.lastIndexOf("/") + 1;
+			var imageFilename = imageSource.substr(imagePathAndFilename);
+
+			$(this).closest('.produkt').find('.stortbillede').attr('src', imagePath + imageFilename);
+
+
+			console.log(name);
+			$('.do_something').on('mouseout', function() {
+				$(this).closest('.produkt').find('.stortbillede').attr('src', name);
+			})
+
+		})
+	</script>
+</body>
+</html>

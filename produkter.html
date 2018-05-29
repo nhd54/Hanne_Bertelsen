@@ -78,17 +78,22 @@
 
 
 
-
 			$('.do_something').on('mouseenter', function() {
+				var name = $(this).closest('.produkt').find('.stortbillede').attr("src");
 				var imagePath = 'http://www.designstorm.dk/kea/2-semester-eksamen/wordpress/wp-content/uploads/2018/05/'; // change your path to 'image/'
 				var imageSource = $(this).attr('src');
-				console.log(imageSource);
 				var imagePathAndFilename = imageSource.lastIndexOf("/") + 1;
 				var imageFilename = imageSource.substr(imagePathAndFilename);
+
 				$(this).closest('.produkt').find('.stortbillede').attr('src', imagePath + imageFilename);
+
+
+				console.log(name);
+				$('.do_something').on('mouseout', function() {
+					$(this).closest('.produkt').find('.stortbillede').attr('src', name);
+				})
+
 			})
-
-
 		}
 
 
@@ -139,7 +144,7 @@
 			console.log(urlid);
 
 
-			let vase = produkter.filter(produkt => produkt.acf.kategori == "vase");
+			let vase = produkter.filter(produkt => produkt.acf.kategori == "Unika");
 			let potter = produkter.filter(produkt => produkt.acf.kategori == "Potter");
 			let skaale = produkter.filter(produkt => produkt.acf.kategori == "Skåle");
 			let fade = produkter.filter(produkt => produkt.acf.kategori == "Fade");
@@ -156,6 +161,10 @@
 					console.log("jeg er forretter");
 					display.innerHTML = "";
 					hentProdukter(potter);
+				} else if (urlid == "Vase") {
+					console.log("jeg er forretter");
+					display.innerHTML = "";
+					hentProdukter(vase);
 				} else if (urlid == "skåle") {
 					console.log("jeg er skåle");
 					display.innerHTML = "";
