@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="script.js"></script>
 	<title>Produkter</title>
 </head>
@@ -32,14 +33,18 @@
 
 			<div class="produkt" data-produkt>
 
-                <div class="stortbillede"></div>
+
 			        <h2></h2>
+			         <img class="stortbillede">
 			        <div class="produkt_hidden">
 			        <p></p>
-			        <img  src="">
-			         <img  src="">
-			        <img  src="">
-			        <img  src="">
+
+
+			         <img class="lille_billede1 do_something">
+			         <img class="lille_billede2 do_something">
+			         <img class="lille_billede3 do_something">
+
+
 			        </div>
 			</div>
                </template>
@@ -62,14 +67,42 @@
 		document.addEventListener("DOMContentLoaded", hentJson);
 
 		async function hentJson() {
+
+
+
 			let dataJson = await fetch(jsonUrl);
 			produkter = await dataJson.json();
 			lavfiltre();
+
+
+
+
+			$('.produkt').find('.do_something').each(function() {
+
+				$('.do_something').mouseenter(function() {
+
+					var billedenavn = $(this).attr("src");
+
+					$('img').parent('.produkt_hidden').parent('.produkt').children('img').attr('src', billedenavn);
+
+				});
+
+			});
+
+
 		}
+
+
+
+
+
 
 		function hentProdukter(produkter) {
 			produkter.forEach(produkt => {
+
 				console.log(produkter);
+
+
 
 				let str = produkt.content.rendered;
 				let rest = str.substr(0, 90)
@@ -77,16 +110,22 @@
 
 				console.log(klon);
 				klon.querySelector("h2").innerHTML = produkt.title.rendered;
-				klon.querySelector(".stortbillede").innerHTML = '<img src="' + produkt.better_featured_image.media_details.sizes.medium.source_url + ' " />';
+				klon.querySelector(".stortbillede").src = produkt.better_featured_image.media_details.sizes.medium.source_url;
+				klon.querySelector(".lille_billede1").src = produkt.acf.billede1.url;
+				klon.querySelector(".lille_billede2").src = produkt.acf.billede2.url;
+				klon.querySelector(".lille_billede3").src = produkt.acf.billede3.url;
 				klon.querySelector("p").innerHTML = rest + "...";
 
 				klon.querySelector(".produkt").addEventListener("click", () => {
 					location.href = "produkt.html?produkt=" + produkt.id;
+
+
 				});
 
 
 
 				display.appendChild(klon);
+
 
 			})
 
@@ -136,6 +175,7 @@
 					hentProdukter(lysestager);
 				} else {
 					console.log("jeg viser alle produkter");
+					display.innerHTML = "";
 					hentProdukter(produkter);
 
 				}

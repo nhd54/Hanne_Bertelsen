@@ -26,10 +26,10 @@
 				<div class="enkelt_produkt">
 					<template>
                     <div class="produkt">
-                        <div class="stortbillede"></div>
-                        <div class="lille_billede1"></div>
-                        <div class="lille_billede2"></div>
-                        <div class="lille_billede3"></div>
+                       <img class="stortbillede">
+                        <img class="lille_billede1">
+			         <img class="lille_billede2">
+			         <img class="lille_billede3">
 
 
                         <h2 class="produkt_overskrift"></h2>
@@ -83,17 +83,17 @@
 
 					console.log(klon);
 					klon.querySelector("h2").innerHTML = enkelt_produkt.title.rendered;
-					klon.querySelector(".stortbillede").innerHTML = '<img src="' + enkelt_produkt.better_featured_image.media_details.sizes.medium.source_url + ' " />';
-					klon.querySelector(".lille_billede1").innerHTML = '<img src="' + enkelt_produkt.acf.billede1.url + ' " />';
-					klon.querySelector(".lille_billede2").innerHTML = '<img src="' + enkelt_produkt.acf.billede2.url + ' " />';
-					klon.querySelector(".lille_billede3").innerHTML = '<img src="' + enkelt_produkt.acf.billede3.url + ' " />';
+					klon.querySelector(".stortbillede").src = enkelt_produkt.better_featured_image.media_details.sizes.medium.source_url;
+					klon.querySelector(".lille_billede1").src = enkelt_produkt.acf.billede1.url;
+					klon.querySelector(".lille_billede2").src = enkelt_produkt.acf.billede2.url;
+					klon.querySelector(".lille_billede3").src = enkelt_produkt.acf.billede3.url;
 					klon.querySelector("p").innerHTML = enkelt_produkt.content.rendered;
 					klon.querySelector(".kategori").innerHTML = "kategori: <br>" + enkelt_produkt.acf.kategori;
 					klon.querySelector(".farve").innerHTML = "farve: <br>" + enkelt_produkt.acf.farve;
 					klon.querySelector(".str").innerHTML = "Størrelse: <br>" + enkelt_produkt.acf.storrelse;
 					klon.querySelector(".materiale").innerHTML = "materiale: <br>" + enkelt_produkt.acf.materiale;
 					klon.querySelector(".pris").innerHTML = "pris: <br>" + enkelt_produkt.acf.pris + ",-";
-
+					//klon.querySelector(".pris").setAttribute
 					display.appendChild(klon);
 				}
 			})

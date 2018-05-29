@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="test.css">
+	<title></title>
+</head>
+
+<body>
+
+
+
+	<div id="test">
+		<div class="produkt">
+			<h2>overskrift</h2>
+			<img class="stortbillede" src="image/20180509_122659.jpg">
+			<div class="produkt_hidden">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque blanditiis cum, a velit accusantium autem possimus nulla praesentium consectetur eum non sed quae accusamus maxime et sunt modi repellat! Officiis.</p>
+
+
+				<img class="lille_billede1 do_something" src="image/20180509_122710.jpg">
+				<img class="lille_billede2 do_something" src="image/20180509_122219.jpg">
+				<img class="lille_billede3 do_something" src="image/20180509_122548.jpg">
+
+
+			</div>
+		</div>
+		<div class="produkt">
+			<h2>overskrift</h2>
+			<img class="stortbillede" src="image/20180509_122659.jpg">
+			<div class="produkt_hidden">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque blanditiis cum, a velit accusantium autem possimus nulla praesentium consectetur eum non sed quae accusamus maxime et sunt modi repellat! Officiis.</p>
+
+
+				<img class="lille_billede1 do_something" src="image/20180509_122710.jpg">
+				<img class="lille_billede2 do_something" src="image/20180509_122219.jpg">
+				<img class="lille_billede3 do_something" src="image/20180509_122548.jpg">
+
+
+			</div>
+		</div>
+		<div class="produkt">
+			<h2>overskrift</h2>
+			<img class="stortbillede" src="image/20180509_122659.jpg">
+			<div class="produkt_hidden">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque blanditiis cum, a velit accusantium autem possimus nulla praesentium consectetur eum non sed quae accusamus maxime et sunt modi repellat! Officiis.</p>
+
+
+				<img class="lille_billede1 do_something" src="image/20180509_122710.jpg">
+				<img class="lille_billede2 do_something" src="image/20180509_122219.jpg">
+				<img class="lille_billede3 do_something" src="image/20180509_122548.jpg">
+
+
+			</div>
+		</div>
+		<div class="produkt">
+			<h2>overskrift</h2>
+			<img class="stortbillede" src="image/20180509_122659.jpg">
+			<div class="produkt_hidden">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque blanditiis cum, a velit accusantium autem possimus nulla praesentium consectetur eum non sed quae accusamus maxime et sunt modi repellat! Officiis.</p>
+
+
+				<img class="lille_billede1 do_something" src="image/20180509_122710.jpg">
+				<img class="lille_billede2 do_something" src="image/20180509_122219.jpg">
+				<img class="lille_billede3 do_something" src="image/20180509_122548.jpg">
+
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$('.produkt').find('.do_something').each(function() {
+
+			$('img').mouseenter(function() {
+
+				var billedenavn = $(this).attr("src");
+
+				$('img').parent('.produkt_hidden').parent('.produkt').children('img').attr('src', billedenavn);
+
+			});
+
+		});
+
+	</script>
+
+</body>
+
+</html>
