@@ -790,3 +790,8 @@ headermenu {
 	grid-column: 1/ span 12;
 
 }
+
+.icon_billed {
+	width: 15%;
+	margin: 2% 8%;
+}
