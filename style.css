@@ -1,12 +1,12 @@
 @font-face {
-    font-family: bookman;
-    src: url(BOKOS.woff2);
+    font-family: BookmanOldStyle;
+    src: url(BookmanOldStyle.woff2);
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'bookman', Calibri, Candara, Segoe, Segoe UI, Optima, Arial;
+    font-family: 'BookmanOldStyle', Calibri, Candara, Segoe, Segoe UI, Optima, Arial;
     text-decoration: none;
 }
 
@@ -38,7 +38,7 @@ header {
 }
 
 nav {
-    grid-column: 4/ span 8;
+    grid-column: 5/ span 8;
 }
 
 .om_slidedown {
@@ -130,14 +130,14 @@ nav {
     width: 80%;
     min-height: 40vw;
     height: auto;
-    margin: 10vw auto;
+    margin: 3vw auto;
     padding: 20px;
 }
 
 .produkter {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
+    margin-top: 5vw;
     grid-template-rows: 10% auto;
     grid-gap: 45px;
 }
@@ -163,8 +163,8 @@ nav {
 .ikon_status_billede {
     position: absolute;
     z-index: 2;
-    width: 4vw;
-    margin-left: 21vw;
+    width: 2vw;
+    margin: 1vw 0 0 22vw;
 
 }
 
@@ -471,7 +471,7 @@ header ul {
 
 .butik_text p {
     color: black;
-    font-family: 'bookman';
+    font-family: 'BookmanOldStyle';
     font-weight: 500;
 }
 
@@ -480,7 +480,8 @@ a {
 }
 
 header li a {
-    color: black;
+    color: #4E4A51;
+    font-size: 0.7em;
 }
 
 li {
@@ -494,6 +495,7 @@ h1 {
     text-align: center;
     font-size: 40px;
     color: white;
+    font-family: 'BookmanOldStyle';
 }
 
 #main_content h1 {
@@ -590,7 +592,7 @@ headermenu {
         padding: 4px;
         width: 100%;
         color: #EDE5DF;
-        font-family: 'HKGrotesk';
+        font-family: 'bookman';
         font-size: 1.5em;
         cursor: pointer;
     }
@@ -616,7 +618,7 @@ headermenu {
         cursor: pointer;
         margin: 2vw;
         padding: 2vw;
-        background-color: #3d5566;
+        background-color: #4E4A51;
         height: 30px;
         width: 30px;
         text-align: left;
@@ -825,13 +827,23 @@ headermenu {
 
 }
 
-.icon_billed {
-    width: 15%;
-    margin: 2% 8%;
+.icon_billede img {
+    height: 50px;
+}
+
+.icon_billede {
+    display: grid;
+    justify-items: center;
 }
 
 .status {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+span {
+    width: 100%;
+    text-align: center;
 }
