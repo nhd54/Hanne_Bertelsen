@@ -2,41 +2,42 @@
 <html lang="">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 
-	<title>Produkter</title>
+    <title>Produkter</title>
 </head>
 
 <body>
 
-	<section id="wrapper">
-		<header id="hovedmenu">
+    <section id="wrapper">
+        <header id="hovedmenu">
 
 
-		</header>
+        </header>
 
-		<article id="content" style="min-height:60vw;">
+        <article id="content" style="min-height:60vw;">
 
-			<section class="welcome"> </section>
+            <section class="welcome"> </section>
 
-			<section id="main_content">
-				<img src="ikoner_nye/butik.svg" class="icon_billed" alt="">
-				<img src="ikoner_nye/bestilling.svg" class="icon_billed" alt="">
-				<img src="ikoner_nye/kurv.svg" class="icon_billed" alt="">
-				<div class="produkter">
+            <section id="main_content">
+                <img src="ikoner_nye/butik.svg" class="icon_billed" alt="">
+                <img src="ikoner_nye/bestilling.svg" class="icon_billed" alt="">
+                <img src="ikoner_nye/kurv.svg" class="icon_billed" alt="">
+                <div class="produkter">
 
 
 
-					<template>
+                    <template>
 
 
 		<div class="produkt" data-produkt>
 			<h2></h2>
+			<img class="ikon_status_billede" src="ikoner_nye/butik.svg">
 			<img class="stortbillede">
 			<div class="produkt_hidden">
 				<p></p>
@@ -50,146 +51,146 @@
 
 
                </template>
-				</div>
-			</section>
+                </div>
+            </section>
 
-		</article>
+        </article>
 
-	</section>
-	<footer>
+    </section>
+    <footer>
 
-	</footer>
+    </footer>
 
-	<script>
-		let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter?per_page=100";
-		let produkter = [];
-		let display = document.querySelector(".produkter");
-		let template = document.querySelector("template");
+    <script>
+        let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter?per_page=100";
+        let produkter = [];
+        let display = document.querySelector(".produkter");
+        let template = document.querySelector("template");
 
-		document.addEventListener("DOMContentLoaded", hentJson);
+        document.addEventListener("DOMContentLoaded", hentJson);
 
-		async function hentJson() {
-
-
-
-			let dataJson = await fetch(jsonUrl);
-			produkter = await dataJson.json();
-			lavfiltre();
+        async function hentJson() {
 
 
 
-			$('.do_something').on('mouseenter', function() {
-				var name = $(this).closest('.produkt').find('.stortbillede').attr("src");
-				var imagePath = 'http://www.designstorm.dk/kea/2-semester-eksamen/wordpress/wp-content/uploads/2018/05/'; // change your path to 'image/'
-				var imageSource = $(this).attr('src');
-				var imagePathAndFilename = imageSource.lastIndexOf("/") + 1;
-				var imageFilename = imageSource.substr(imagePathAndFilename);
-
-				$(this).closest('.produkt').find('.stortbillede').attr('src', imagePath + imageFilename);
+            let dataJson = await fetch(jsonUrl);
+            produkter = await dataJson.json();
+            lavfiltre();
 
 
-				console.log(name);
-				$('.do_something').on('mouseout', function() {
-					$(this).closest('.produkt').find('.stortbillede').attr('src', name);
-				})
 
-			})
-		}
+            $('.do_something').on('mouseenter', function() {
+                var name = $(this).closest('.produkt').find('.stortbillede').attr("src");
+                var imagePath = 'http://www.designstorm.dk/kea/2-semester-eksamen/wordpress/wp-content/uploads/2018/05/'; // change your path to 'image/'
+                var imageSource = $(this).attr('src');
+                var imagePathAndFilename = imageSource.lastIndexOf("/") + 1;
+                var imageFilename = imageSource.substr(imagePathAndFilename);
+
+                $(this).closest('.produkt').find('.stortbillede').attr('src', imagePath + imageFilename);
 
 
+                console.log(name);
+                $('.do_something').on('mouseout', function() {
+                    $(this).closest('.produkt').find('.stortbillede').attr('src', name);
+                })
+
+            })
+        }
 
 
 
 
-		function hentProdukter(produkter) {
-			produkter.forEach(produkt => {
-
-				console.log(produkter);
 
 
+        function hentProdukter(produkter) {
+            produkter.forEach(produkt => {
 
-				let str = produkt.content.rendered;
-				let rest = str.substr(0, 90)
-				let klon = template.cloneNode(true).content;
-
-				console.log(klon);
-				klon.querySelector("h2").innerHTML = produkt.title.rendered;
-				klon.querySelector(".stortbillede").src = produkt.better_featured_image.media_details.sizes.medium.source_url;
-				klon.querySelector(".lille_billede1").src = produkt.acf.billede1.url;
-				klon.querySelector(".lille_billede2").src = produkt.acf.billede2.url;
-				klon.querySelector(".lille_billede3").src = produkt.acf.billede3.url;
-				klon.querySelector("p").innerHTML = rest + "...";
-
-				klon.querySelector(".produkt").addEventListener("click", () => {
-					location.href = "produkt.html?produkt=" + produkt.id;
-
-
-				});
+                console.log(produkter);
 
 
 
-				display.appendChild(klon);
+                let str = produkt.content.rendered;
+                let rest = str.substr(0, 90)
+                let klon = template.cloneNode(true).content;
+
+                console.log(klon);
+                klon.querySelector("h2").innerHTML = produkt.title.rendered;
+                klon.querySelector(".stortbillede").src = produkt.better_featured_image.media_details.sizes.medium.source_url;
+                klon.querySelector(".lille_billede1").src = produkt.acf.billede1.url;
+                klon.querySelector(".lille_billede2").src = produkt.acf.billede2.url;
+                klon.querySelector(".lille_billede3").src = produkt.acf.billede3.url;
+                klon.querySelector("p").innerHTML = rest + "...";
+
+                klon.querySelector(".produkt").addEventListener("click", () => {
+                    location.href = "produkt.html?produkt=" + produkt.id;
 
 
-			})
+                });
 
 
-		}
+
+                display.appendChild(klon);
 
 
-		function lavfiltre() {
-			let urlParams = new URLSearchParams(window.location.search);
-			let urlid = urlParams.get("kategori");
-
-			console.log(urlid);
+            })
 
 
-			let vase = produkter.filter(produkt => produkt.acf.kategori == "Unika");
-			let potter = produkter.filter(produkt => produkt.acf.kategori == "Potter");
-			let skaale = produkter.filter(produkt => produkt.acf.kategori == "Skåle");
-			let fade = produkter.filter(produkt => produkt.acf.kategori == "Fade");
-			let lamper = produkter.filter(produkt => produkt.acf.kategori == "Lamper");
-			let lysestager = produkter.filter(produkt => produkt.acf.kategori == "Lysestager");
-			console.log(lysestager);
-
-			let single = produkter.find(produkt => {
-				if (urlid == "vase") {
-					console.log("jeg er alle");
+        }
 
 
-				} else if (urlid == "potter") {
-					console.log("jeg er forretter");
-					display.innerHTML = "";
-					hentProdukter(potter);
-				} else if (urlid == "Vase") {
-					console.log("jeg er forretter");
-					display.innerHTML = "";
-					hentProdukter(vase);
-				} else if (urlid == "skåle") {
-					console.log("jeg er skåle");
-					display.innerHTML = "";
-					hentProdukter(skaale);
-				} else if (urlid == "fade") {
-					console.log("jeg er fade");
-					display.innerHTML = "";
-					hentProdukter(fade);
-				} else if (urlid == "lamper") {
-					console.log("alle lamperne");
-					display.innerHTML = "";
-					hentProdukter(lamper);
-				} else if (urlid == "lysestager") {
-					console.log("jeg er drikkevarer");
-					display.innerHTML = "";
-					hentProdukter(lysestager);
-				} else {
-					console.log("jeg viser alle produkter");
-					display.innerHTML = "";
-					hentProdukter(produkter);
+        function lavfiltre() {
+            let urlParams = new URLSearchParams(window.location.search);
+            let urlid = urlParams.get("kategori");
 
-				}
-			});
-		}
-	</script>
+            console.log(urlid);
+
+
+            let vase = produkter.filter(produkt => produkt.acf.kategori == "Unika");
+            let potter = produkter.filter(produkt => produkt.acf.kategori == "Potter");
+            let skaale = produkter.filter(produkt => produkt.acf.kategori == "Skåle");
+            let fade = produkter.filter(produkt => produkt.acf.kategori == "Fade");
+            let lamper = produkter.filter(produkt => produkt.acf.kategori == "Lamper");
+            let lysestager = produkter.filter(produkt => produkt.acf.kategori == "Lysestager");
+            console.log(lysestager);
+
+            let single = produkter.find(produkt => {
+                if (urlid == "vase") {
+                    console.log("jeg er alle");
+
+
+                } else if (urlid == "potter") {
+                    console.log("jeg er forretter");
+                    display.innerHTML = "";
+                    hentProdukter(potter);
+                } else if (urlid == "Vase") {
+                    console.log("jeg er forretter");
+                    display.innerHTML = "";
+                    hentProdukter(vase);
+                } else if (urlid == "skåle") {
+                    console.log("jeg er skåle");
+                    display.innerHTML = "";
+                    hentProdukter(skaale);
+                } else if (urlid == "fade") {
+                    console.log("jeg er fade");
+                    display.innerHTML = "";
+                    hentProdukter(fade);
+                } else if (urlid == "lamper") {
+                    console.log("alle lamperne");
+                    display.innerHTML = "";
+                    hentProdukter(lamper);
+                } else if (urlid == "lysestager") {
+                    console.log("jeg er drikkevarer");
+                    display.innerHTML = "";
+                    hentProdukter(lysestager);
+                } else {
+                    console.log("jeg viser alle produkter");
+                    display.innerHTML = "";
+                    hentProdukter(produkter);
+
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
