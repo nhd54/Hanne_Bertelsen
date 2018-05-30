@@ -335,7 +335,9 @@ footer a {
 }
 
 .krukke {
-    grid-column: 11/12;
+    grid-column: 12/12;
+    width: 5vw;
+    margin: 1vw;
 }
 
 footer ul {
