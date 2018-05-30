@@ -327,17 +327,28 @@ footer a {
 
 .some {
     grid-column: 1/2;
+    padding: 1vw 0 0 1vw
 }
 
 .some img {
-    margin: 5%;
     width: 35%
 }
 
+.some img:hover {
+    width: 40%
+}
+
+.kontakt_kort {
+    margin: 1.8vw 0 0 0;
+    grid-column: 2/4;
+}
+
+
+
 .krukke {
     grid-column: 12/12;
-    width: 5vw;
-    margin: 1vw;
+    width: 4vw;
+    margin: 1vw 0 1vw 3vw;
 }
 
 footer ul {
@@ -440,6 +451,9 @@ hr {
     text-decoration: none;
 }
 
+.footermenu:hover {
+    font-size: 1.2em;
+}
 
 
 
