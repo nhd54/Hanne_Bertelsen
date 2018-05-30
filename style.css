@@ -829,3 +829,9 @@ headermenu {
     width: 15%;
     margin: 2% 8%;
 }
+
+.status {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
