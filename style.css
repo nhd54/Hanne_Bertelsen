@@ -224,9 +224,9 @@ nav {
     grid-row-start: 1;
     width: 100%;
     height: 200px;
-    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 
@@ -237,9 +237,9 @@ nav {
 .lille_billede3 {
     width: 33%;
     height: 33%;
-    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 .billede1,
@@ -247,9 +247,9 @@ nav {
 .billede3 {
     width: 100%;
     grid-column: span 1;
-    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 .kategori a {
@@ -373,18 +373,18 @@ footer ul {
     grid-column: span 4;
     width: 100%;
     margin: 10px 0;
-    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 .butik_stort {
     grid-column: span 6;
     width: 100%;
     margin: 30px 0;
-    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 
 }
 
@@ -392,9 +392,9 @@ footer ul {
     grid-column: span 2;
     width: 100%;
     height: 250px;
-    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 
 
 
@@ -466,9 +466,9 @@ hr {
 .map {
     grid-column: span 12;
     width: 100%;
-    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 /**********   Produkt siden *************/
@@ -504,6 +504,7 @@ header ul {
     color: #4E4A51;
     font-family: 'BookmanOldStyle';
     font-weight: 500;
+    text-align: left;
 }
 
 a {
@@ -568,9 +569,7 @@ h1 {
 
 p {
     margin-top: 30px;
-    text-align: center;
     width: 60%;
-    color: #E4E2E3;
 
 }
 
@@ -783,9 +782,9 @@ headermenu {
     .footermenu a {}
     .event_billede {
         grid-column: span 12;
-        -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 
     }
 
@@ -843,9 +842,9 @@ headermenu {
     .billede2,
     .billede3 {
         width: 100%;
-        -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-        box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
     }
 
     .billede2 {
