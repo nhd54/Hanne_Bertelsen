@@ -58,6 +58,7 @@ nav {
     text-align: center;
     background-color: #e4e2e3;
     margin-left: 18%;
+    font-weight: normal;
 }
 
 .produktudvalg li {
@@ -127,7 +128,7 @@ nav {
 
 #main_content {
     background-color: #e4e2e3;
-    width: 80%;
+    width: 60%;
     min-height: 40vw;
     height: auto;
     margin: 3vw auto;
@@ -304,14 +305,16 @@ nav {
 
 .logo_forsiden {
     width: 30%;
-    margin: 2vw;
+    margin: 0 0 2vw 0;
 }
 
 .logo_forside {
     width: 100%;
 }
 
-.index_text {}
+.index_text {
+    font-style: italic;
+}
 
 footer {
     display: grid;
@@ -505,6 +508,7 @@ header ul {
 
 a {
     color: #E4E2E3;
+    font-weight: normal;
 }
 
 header li a {
@@ -524,6 +528,16 @@ h1 {
     font-size: 2em;
     color: #E4E2E3;
     font-family: 'BookmanOldStyle';
+    font-weight: normal;
+}
+
+.navn_index {
+
+    text-align: center;
+    font-size: 3.3em;
+    color: #E4E2E3;
+    font-family: 'BookmanOldStyle';
+    font-weight: normal;
 }
 
 #main_content h1 {
@@ -885,4 +899,60 @@ headermenu {
 span {
     width: 100%;
     text-align: center;
+}
+
+blockquote {
+    /* font-family: Georgia, serif; */
+    /* font-size: 18px; */
+    font-style: italic;
+    /* width: 550px; */
+    /* margin: 0.25em 0; */
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #E4E2E3;
+    text-align: center
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -13px;
+    top: -27px;
+    color: #E4E2E3;
+}
+
+blockquote cite {
+    color: #E4E2E3;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+blockquote:after {
+    display: block;
+    padding-left: 10px;
+    content: "\201D";
+    font-size: 80px;
+    position: absolute;
+    left: 627px;
+    top: 59px;
+    color: #E4E2E3;
+}
+
+blockquote cite:after {
+    content: "\2014 \2009";
+}
+
+.titel {
+    margin: 0 0 0 20vw;
+    font-size: 1.5em;
+
 }
