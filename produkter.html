@@ -50,7 +50,7 @@
 
 		<div class="produkt" data-produkt>
 			<h2></h2>
-			<img class="ikon_status_billede" src="ikoner_nye/butik.svg">
+			<img class="ikon_status_billede">
 			<img class="stortbillede">
 			<div class="produkt_hidden">
 				<p></p>
@@ -132,6 +132,16 @@
                 klon.querySelector(".lille_billede1").src = produkt.acf.billede1.url;
                 klon.querySelector(".lille_billede2").src = produkt.acf.billede2.url;
                 klon.querySelector(".lille_billede3").src = produkt.acf.billede3.url;
+
+                if (produkt.acf.status == "webshop") {
+                    klon.querySelector(".ikon_status_billede").src = "ikoner_nye/kurv_icon.svg";
+                    //console.log("hej");
+                } else if (produkt.acf.status == "butik") {
+                    klon.querySelector(".ikon_status_billede").src = "ikoner_nye/butik_icon.svg";
+                } else {
+                    klon.querySelector(".ikon_status_billede").src = "ikoner_nye/bestilling_icon.svg";
+                }
+
                 klon.querySelector("p").innerHTML = rest + "...";
 
                 klon.querySelector(".produkt").addEventListener("click", () => {
@@ -165,6 +175,9 @@
             let lamper = produkter.filter(produkt => produkt.acf.kategori == "Lamper");
             let lysestager = produkter.filter(produkt => produkt.acf.kategori == "Lysestager");
             console.log(lysestager);
+
+
+
 
             let single = produkter.find(produkt => {
                 if (urlid == "vase") {
