@@ -78,7 +78,7 @@ nav {
     }
 
     .produktudvalg a {
-        color: black;
+        color: #4E4A51;
     }
 }
 
@@ -243,7 +243,7 @@ nav {
 }
 
 .kategori a {
-    color: #000;
+    color: #4E4A51;
 }
 
 .info {
@@ -290,7 +290,7 @@ nav {
 }
 
 .om_slidedown a {
-    color: black;
+    color: #4E4A51;
 }
 
 .logo_forsiden {
@@ -310,7 +310,7 @@ footer {
 }
 
 footer a {
-    color: black;
+    color: #4E4A51;
 }
 
 .some {
@@ -388,7 +388,7 @@ footer ul {
 
 .butik_text {
     grid-column: span 6;
-    color: black;
+    color: #4E4A51;
     width: 100%;
     margin-top: 30px;
 
@@ -470,7 +470,7 @@ header ul {
 }
 
 .butik_text p {
-    color: black;
+    color: #4E4A51;
     font-family: 'BookmanOldStyle';
     font-weight: 500;
 }
@@ -500,19 +500,21 @@ h1 {
 
 #main_content h1 {
 
-    color: black;
+    color: #4E4A51;
 
 
 }
 
 .overskrift_om {
     grid-column: span 12;
-    color: black;
+    color: #4E4A51;
     font-size: 30px;
 }
 
 .produkt h2 {
     grid-column: span 3;
+    color: #4E4A51;
+    font-size: 0.8em;
 }
 
 
@@ -539,7 +541,7 @@ h2 {
 
 .produkt p,
 .beskrivelse p {
-    color: #000;
+    color: #4E4A51;
     text-align: left;
 
 }
@@ -704,7 +706,7 @@ headermenu {
 
     .butik_text {
         grid-column: span 12;
-        color: black;
+        color: #4E4A51;
         width: 100%;
         margin: 0;
     }
