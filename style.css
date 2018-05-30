@@ -294,12 +294,15 @@ nav {
 }
 
 .logo_forsiden {
-    width: 20%;
+    width: 30%;
+    margin: 2vw;
 }
 
 .logo_forside {
     width: 100%;
 }
+
+.index_text {}
 
 footer {
     display: grid;
@@ -476,7 +479,7 @@ header ul {
 }
 
 a {
-    color: white;
+    color: #E4E2E3;
 }
 
 header li a {
@@ -493,8 +496,8 @@ li {
 
 h1 {
     text-align: center;
-    font-size: 40px;
-    color: white;
+    font-size: 2em;
+    color: #E4E2E3;
     font-family: 'BookmanOldStyle';
 }
 
@@ -528,7 +531,7 @@ p {
     margin-top: 30px;
     text-align: center;
     width: 60%;
-    color: white;
+    color: #E4E2E3;
 
 }
 
