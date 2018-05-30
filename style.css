@@ -168,6 +168,7 @@ nav {
 
 }
 
+
 .image-wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -825,6 +826,7 @@ headermenu {
         margin-left: 65vw;
 
     }
+
 }
 
 .slideshow-container {
