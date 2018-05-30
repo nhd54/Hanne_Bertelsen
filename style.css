@@ -160,7 +160,13 @@ nav {
     cursor: pointer;
 }
 
+.ikon_status_billede {
+    position: absolute;
+    z-index: 2;
+    width: 4vw;
+    margin-left: 21vw;
 
+}
 
 .image-wrapper {
     display: flex;
@@ -804,6 +810,14 @@ headermenu {
         grid-column: 9/12;
         margin-top: 10px;
     }
+
+    .ikon_status_billede {
+        position: absolute;
+        z-index: 2;
+        width: 13vw;
+        margin-left: 65vw;
+
+    }
 }
 
 .slideshow-container {
@@ -815,8 +829,3 @@ headermenu {
     width: 15%;
     margin: 2% 8%;
 }
-
-.status {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
