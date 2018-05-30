@@ -2,30 +2,31 @@
 <html lang="">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
-	<title>Produkter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Produkter</title>
 </head>
 
 <body>
 
-	<section id="wrapper">
-		<header id="hovedmenu">
+    <section id="wrapper">
+        <header id="hovedmenu">
 
 
-		</header>
+        </header>
 
-		<article id="content" style="min-height:60vw;">
+        <article id="content" style="min-height:60vw;">
 
-			<section class="welcome"> </section>
+            <section class="welcome"> </section>
 
-			<section id="main_content">
+            <section id="main_content">
 
-				<div class="enkelt_produkt">
-					<template>
+                <div class="enkelt_produkt">
+                    <template>
                     <div class="produkt">
+                      <img class="ikon_status_billede_produkt">
                        <img class="stortbillede">
 
 
@@ -47,61 +48,70 @@
                             <p></p>
                     </div>
                 </template>
-				</div>
-			</section>
+                </div>
+            </section>
 
-		</article>
+        </article>
 
-	</section>
-	<footer>
+    </section>
+    <footer>
 
-	</footer>
+    </footer>
 
-	<script>
-		let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter";
-		let produkt = [];
-		let display = document.querySelector(".enkelt_produkt");
-		let template = document.querySelector("template");
+    <script>
+        let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter";
+        let produkt = [];
+        let display = document.querySelector(".enkelt_produkt");
+        let template = document.querySelector("template");
 
-		document.addEventListener("DOMContentLoaded", hentJson);
+        document.addEventListener("DOMContentLoaded", hentJson);
 
-		async function hentJson() {
-			let dataJson = await fetch(jsonUrl);
-			produkt = await dataJson.json();
-			console.log(produkt);
-			hentProdukt();
-		}
+        async function hentJson() {
+            let dataJson = await fetch(jsonUrl);
+            produkt = await dataJson.json();
+            console.log(produkt);
+            hentProdukt();
+        }
 
-		function hentProdukt() {
+        function hentProdukt() {
 
-			let urlParams = new URLSearchParams(window.location.search);
-			let urlId = urlParams.get("produkt");
-			let klon = template.cloneNode(true).content;
-			console.log(urlId);
-			let single = produkt.find(enkelt_produkt => {
-				if (urlId == enkelt_produkt.id) {
+            let urlParams = new URLSearchParams(window.location.search);
+            let urlId = urlParams.get("produkt");
+            let klon = template.cloneNode(true).content;
+            console.log(urlId);
+            let single = produkt.find(enkelt_produkt => {
+                if (urlId == enkelt_produkt.id) {
 
-					console.log("jeg virker");
+                    console.log("jeg virker");
 
-					console.log(klon);
-					klon.querySelector("h2").innerHTML = enkelt_produkt.title.rendered;
-					klon.querySelector(".stortbillede").src = enkelt_produkt.better_featured_image.media_details.sizes.medium.source_url;
-					klon.querySelector(".billede1").src = enkelt_produkt.acf.billede1.url;
-					klon.querySelector(".billede2").src = enkelt_produkt.acf.billede2.url;
-					klon.querySelector(".billede3").src = enkelt_produkt.acf.billede3.url;
-					klon.querySelector("p").innerHTML = enkelt_produkt.content.rendered;
-					klon.querySelector(".kategori").innerHTML = "kategori: <br>" + enkelt_produkt.acf.kategori;
-					klon.querySelector(".farve").innerHTML = "farve: <br>" + enkelt_produkt.acf.farve;
-					klon.querySelector(".str").innerHTML = "Størrelse: <br>" + enkelt_produkt.acf.storrelse;
-					klon.querySelector(".materiale").innerHTML = "materiale: <br>" + enkelt_produkt.acf.materiale;
-					klon.querySelector(".pris").innerHTML = "pris: <br>" + enkelt_produkt.acf.pris + ",-";
-					//klon.querySelector(".pris").setAttribute
-					display.appendChild(klon);
-				}
-			})
+                    console.log(klon);
+                    klon.querySelector("h2").innerHTML = enkelt_produkt.title.rendered;
+                    klon.querySelector(".stortbillede").src = enkelt_produkt.better_featured_image.media_details.sizes.medium.source_url;
+                    klon.querySelector(".billede1").src = enkelt_produkt.acf.billede1.url;
+                    klon.querySelector(".billede2").src = enkelt_produkt.acf.billede2.url;
+                    klon.querySelector(".billede3").src = enkelt_produkt.acf.billede3.url;
+                    if (enkelt_produkt.acf.status == "webshop") {
+                        klon.querySelector(".ikon_status_billede_produkt").src = "ikoner_nye/kurv_icon.svg";
+                        //console.log("hej");
+                    } else if (enkelt_produkt.acf.status == "butik") {
+                        klon.querySelector(".ikon_status_billede_produkt").src = "ikoner_nye/butik_icon.svg";
+                    } else {
+                        klon.querySelector(".ikon_status_billede_produkt").src = "ikoner_nye/bestilling_icon.svg";
+                    }
+                    klon.querySelector("p").innerHTML = enkelt_produkt.content.rendered;
+                    klon.querySelector(".kategori").innerHTML = "kategori: <br>" + enkelt_produkt.acf.kategori;
+                    klon.querySelector(".farve").innerHTML = "farve: <br>" + enkelt_produkt.acf.farve;
+                    klon.querySelector(".str").innerHTML = "Størrelse: <br>" + enkelt_produkt.acf.storrelse;
+                    klon.querySelector(".materiale").innerHTML = "materiale: <br>" + enkelt_produkt.acf.materiale;
+                    klon.querySelector(".pris").innerHTML = "pris: <br>" + enkelt_produkt.acf.pris + ",-";
+                    //klon.querySelector(".pris").setAttribute
+                    display.appendChild(klon);
+                }
+            })
 
-		}
-	</script>
+        }
+
+    </script>
 </body>
 
 </html>
