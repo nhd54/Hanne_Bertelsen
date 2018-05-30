@@ -168,6 +168,14 @@ nav {
 
 }
 
+.ikon_status_billede_produkt {
+    position: absolute;
+    z-index: 2;
+    width: 3vw;
+    margin: 1vw 0 0 36vw;
+
+}
+
 .image-wrapper {
     display: flex;
     justify-content: space-evenly;
@@ -820,6 +828,13 @@ headermenu {
         z-index: 2;
         width: 13vw;
         margin-left: 65vw;
+
+    }
+    .ikon_status_billede_produkt {
+        position: absolute;
+        z-index: 2;
+        width: 13vw;
+        margin-left: 63vw;
 
     }
 }
