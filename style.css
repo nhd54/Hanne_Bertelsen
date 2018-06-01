@@ -38,7 +38,7 @@ header {
 }
 
 nav {
-    grid-column: 3/ span 8;
+    grid-column: 5/ span 8;
 }
 
 .om_slidedown {
@@ -539,7 +539,7 @@ li {
     display: inline;
     margin: 65px;
     font-size: 1em;
-    font-weight: 800;
+    font-weight: 100;
 }
 
 .welcome ul {
@@ -962,7 +962,7 @@ blockquote:after {
 
 
 .titel {
-    margin: 0 0 0 45vw;
+    margin: 0 0 0 20vw;
     font-size: 1.5em;
     color: #E4E2E3;
 
