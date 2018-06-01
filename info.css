@@ -18,7 +18,7 @@
 .infographic {
 	display: grid;
 	grid-template-columns: repeat(12, 4.94vw);
-	grid-template-rows: repeat(5, 10vw);
+	grid-template-rows: repeat(4, 10vw);
 	grid-gap: 0.7w;
 	grid-row-gap: 50px;
 	background-color: transparent;
@@ -173,7 +173,7 @@
 .materialer_pil_test {
 	width: 384%;
 	margin-left: 204%;
-	transform: rotate(18deg);
+	transform: rotate(30deg);
 	margin-top: -90%;
 }
 
