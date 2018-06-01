@@ -389,7 +389,7 @@ footer ul {
 .butik_stort {
     grid-column: span 6;
     width: 100%;
-    margin: 4vw 0 3vw 0;
+    margin: 2vw 0 3vw 0;
     -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
@@ -425,7 +425,7 @@ footer ul {
 .butik_text {
     grid-column: span 6;
     color: #4E4A51;
-    width: 95%;
+    width: 89%;
     padding: 0vw 0vw 0 2vw;
     font-size: 0.6em;
     line-height: 1.2vw;
@@ -511,6 +511,7 @@ header ul {
     font-family: 'BookmanOldStyle';
     font-weight: 100;
     text-align: left;
+    margin: 0.5vw 0 0 1vw;
 }
 
 a {
@@ -595,11 +596,12 @@ p {
 
 }
 
-.butik_text p,
-h2 {
+
+.butik_text h2 {
     text-align: left;
     margin-left: 10px;
     width: 90%;
+    margin-top: 2vw;
 }
 
 .produkt p,
@@ -981,6 +983,7 @@ blockquote:after {
     color: #4E4A51;
     text-align: center;
     font-size: 0.8em;
+    margin-top: -1%;
 }
 
 .om_hanne_citat:before {
