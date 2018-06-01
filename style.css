@@ -38,33 +38,34 @@ header {
 }
 
 nav {
-    grid-column: 5/ span 8;
+    grid-column: 3/ span 8;
 }
 
 .om_slidedown {
     display: none;
-    width: 15%;
+    width: 10%;
+    margin-left: 2%;
     position: absolute;
     border-radius: 10%;
     text-align: center;
     background-color: #e4e2e3;
+    font-size: 1em;
 }
 
 .produktudvalg {
     display: none;
-    width: 15vw;
+    width: 10%;
     position: absolute;
     border-radius: 10%;
     text-align: center;
     background-color: #e4e2e3;
-    margin-left: 18%;
+    margin-left: 17.5%;
     font-weight: normal;
 }
 
 .produktudvalg li {
     display: block;
     margin: 20px;
-    border-bottom: 1px solid black;
 }
 
 
@@ -102,12 +103,19 @@ nav {
 .om_slidedown li {
     display: block;
     margin: 20px;
-    border-bottom: 1px solid black;
 
 }
 
-.forside_om ul {
-    margin: 0;
+.forside_om ul li {
+    margin: 1vw 0 1vw 0;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+.forside_produkt ul li {
+    margin: 1vw 0 1vw 0;
+    font-size: 0.9em;
+    font-weight: 100;
 }
 
 #banner {
@@ -132,7 +140,7 @@ nav {
     min-height: 40vw;
     height: auto;
     margin: 2vw auto;
-    padding: 3vw;
+    padding: 2vw 3vw 3vw 3vw;
 }
 
 .produkter {
@@ -305,7 +313,7 @@ nav {
 
 .logo_forsiden {
     width: 30%;
-    margin: 0 0 2vw 0;
+    margin: 0 0 3vw 0;
 }
 
 .logo_forside {
@@ -321,7 +329,7 @@ footer {
     grid-template-columns: repeat(12, 8%);
     grid-gap: 0.37%;
     background-color: #e4e2e3;
-
+    margin-top: -5vw;
 }
 
 footer a {
@@ -381,7 +389,7 @@ footer ul {
 .butik_stort {
     grid-column: span 6;
     width: 100%;
-    margin: 30px 0;
+    margin: 1vw 0 0 0;
     -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
@@ -419,18 +427,20 @@ footer ul {
     color: #4E4A51;
     width: 95%;
     padding: 0vw 0vw 0 2vw;
-    font-size: 0.8em;
+    font-size: 0.6em;
+    line-height: 1.2vw;
 }
 
 .citat {
-    grid-column: 4 / span 7;
+    grid-column: 4 / span 8;
     text-align: left;
-    width: 90%;
-    margin: 50px 0
+    width: 85%;
+    margin: 0 0 2.2vw 0;
 }
 
 .logo_header {
-    width: 20%;
+    width: 15%;
+    padding: 0.3vw 0 0 0.3vw;
     grid-column: span 2;
 
 }
@@ -499,7 +509,7 @@ header ul {
 .butik_text p {
     color: #4E4A51;
     font-family: 'BookmanOldStyle';
-    font-weight: 500;
+    font-weight: 100;
     text-align: left;
 }
 
@@ -519,6 +529,22 @@ li {
     font-size: 20px;
     font-weight: 800;
 }
+
+.welcome .forside_produkt,
+.forside_om,
+.forside_events {
+    display: inline;
+    margin: 65px;
+    font-size: 1em;
+    font-weight: 800;
+}
+
+.welcome ul {
+    z-index: 100;
+}
+
+.welcome_index {}
+
 
 h1 {
     text-align: center;
@@ -897,26 +923,25 @@ span {
 }
 
 blockquote {
-    /* font-family: Georgia, serif; */
-    /* font-size: 18px; */
     font-style: italic;
-    /* width: 550px; */
-    /* margin: 0.25em 0; */
     padding: 0.35em 40px;
     line-height: 1.45;
     position: relative;
     color: #E4E2E3;
-    text-align: center
+    text-align: center;
+    font-size: 0.8em;
+    width: 78%;
+    margin: 3vw 0 0 0
 }
 
 blockquote:before {
     display: block;
     padding-left: 10px;
     content: "\201C";
-    font-size: 80px;
+    font-size: 4.5vw;
     position: absolute;
-    left: -13px;
-    top: -27px;
+    left: -1px;
+    top: -32px;
     color: #E4E2E3;
 }
 
@@ -925,17 +950,18 @@ blockquote:after {
     display: block;
     padding-left: 10px;
     content: "\201D";
-    font-size: 80px;
+    font-size: 4.5vw;
     position: absolute;
-    left: 627px;
-    top: 59px;
+    left: 539px;
+    top: 47px;
     color: #E4E2E3;
 }
 
 
 .titel {
-    margin: 0 0 0 20vw;
+    margin: 0 0 0 45vw;
     font-size: 1.5em;
+    color: #E4E2E3;
 
 }
 
@@ -946,7 +972,8 @@ blockquote:after {
     line-height: 1.45;
     position: relative;
     color: #4E4A51;
-    text-align: center
+    text-align: center;
+    font-size: 0.8em;
 }
 
 .om_hanne_citat:before {
@@ -955,8 +982,8 @@ blockquote:after {
     content: "\201C";
     font-size: 55px;
     position: absolute;
-    left: 16px;
-    top: -25px;
+    left: 5px;
+    top: -21px;
     color: #4E4A51;
 }
 
@@ -966,7 +993,7 @@ blockquote:after {
     content: "\201D";
     font-size: 55px;
     position: absolute;
-    left: 263px;
-    top: 56px;
+    left: 330px;
+    top: 23px;
     color: #4E4A51;
 }
