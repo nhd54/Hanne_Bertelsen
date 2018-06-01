@@ -38,9 +38,7 @@ header {
 }
 
 nav {
-    <<<<<<< HEAD grid-column: 5/ span 8;
-    =======grid-column: 3/ span 8;
-    > > > > > > > origin/master
+    grid-column: 6/ span 6;
 }
 
 .om_slidedown {
@@ -287,13 +285,23 @@ nav {
 .events {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 2vw;
 }
 
 .event {
     display: grid;
     grid-template-columns: repeat(12, 8%);
     grid-gap: 0.7%;
-    )
+    margin-bottom: 1vw;
+}
+
+.event h2 {
+    text-align: left;
+    margin-left: 2vw;
+    width: 90%;
+    margin-top: 2vw;
+    color: #4E4A51;
+    font-size: 0.8em;
 }
 
 .event_billede {
@@ -304,6 +312,7 @@ nav {
     -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    width: 100%;
 }
 
 .beskrivelse {
@@ -455,7 +464,7 @@ footer ul {
 }
 
 .logo_header {
-    width: 15%;
+    width: 2vw;
     padding: 0.3vw 0 0 0.3vw;
     grid-column: span 2;
 
@@ -550,15 +559,11 @@ li {
 .welcome .forside_produkt,
 .forside_om,
 .forside_events {
-    <<<<<<< HEAD display: inline;
+    display: inline;
     margin: 65px;
     font-size: 1em;
     font-weight: 100;
-    =======display: inline;
-    margin: 65px;
-    font-size: 1em;
-    font-weight: 800;
-    > > > > > > > origin/master
+
 }
 
 .welcome ul {
@@ -924,7 +929,7 @@ headermenu {
 }
 
 .icon_billede img {
-    height: 50px;
+    height: 1.5vw;
 }
 
 .icon_billede {
@@ -981,13 +986,11 @@ blockquote:after {
 
 
 .titel {
-    <<<<<<< HEAD margin: 0 0 0 20vw;
+    margin: 0 0 0 20vw;
     font-size: 1.5em;
     color: #E4E2E3;
-    =======margin: 0 0 0 45vw;
-    font-size: 1.5em;
-    color: #E4E2E3;
-    > > > > > > > origin/master
+
+
 }
 
 .vase_titel {
