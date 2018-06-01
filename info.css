@@ -1,45 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #infographic {
-    grid-column: span 12;
+	grid-column: span 12;
 }
 
 .infographic div {
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(3, 30%);
+	grid-gap: 10px;
 
 
 }
 
 .infographic {
-    display: grid;
-    grid-template-columns: repeat(12, 8.3%);
-    grid-template-rows: repeat(5, 300px);
-    grid-gap: 0.7%;
-    grid-row-gap: 50px;
-    background-color: transparent;
-    height: auto;
+	display: grid;
+	grid-template-columns: repeat(12, 4.94vw);
+	grid-template-rows: repeat(5, 10vw);
+	grid-gap: 0.7w;
+	grid-row-gap: 50px;
+	background-color: transparent;
+	height: auto;
 
 }
 
 .info_branding {
-    grid-row: 1/2;
-    padding: 5px;
-    grid-column: 2/4;
-    margin-top: 155%;
+	grid-row: 1/2;
+	padding: 5px;
+	grid-column: 2/4;
+	margin-top: 155%;
 
 }
 
 
 .branding_pil {
-    position: absolute;
-    width: 11%;
-    left: 33%;
-    top: 251%;
+	position: absolute;
+	width: 11vw;
+	left: 28vw;
+	top: 116.5vw;
 }
 
 
@@ -47,100 +47,349 @@
 
 
 .design_pil {
-    position: absolute;
-    top: 269%;
-    width: 11%;
-    transform: rotate(-11deg);
-    right: 31%;
+	position: absolute;
+	top: 127vw;
+	width: 8vw;
+	transform: rotate(-11deg);
+	right: 39vw;
 }
 
 .design_pil_glasur {
-    position: absolute;
-    width: 10%;
-    right: 28%;
-    top: 231%;
+	position: absolute;
+	width: 9vw;
+	right: 35vw;
+	top: 110.5vw;
 }
 
 
 
 .info_vase {
-    grid-column: 4 / span 6;
-    grid-row-start: 1;
-    grid-row-end: 5;
-    margin-top: -4%;
+	grid-column: 4 / span 6;
+	grid-row-start: 1;
+	grid-row-end: 5;
+	margin-top: -4%;
 }
 
 .info_materialer {
-    grid-row: 3/4;
-    grid-column: 2/4;
-    margin-top: -173px;
+	grid-row: 4/4;
+	grid-column: 2/4;
+	margin-top: -10vw;
 }
 
 .info_glasur {
-    grid-row: 1/2;
-    grid-column: 10/12;
-    margin-top: 67px;
+	grid-row: 1/2;
+	grid-column: 10/12;
+	margin-top: 67px;
 }
 
 .info_design {
-    grid-row: 2/3;
-    grid-column: 9/11;
+	grid-row: 3/3;
+	grid-column: 9/11;
+	margin-top: -5vw;
 }
 
 .vase_img {
-    margin-top: -50px;
+	margin-top: -50px;
 }
 
 .info_icon {
 
-    grid-column: span 1;
-    position: relative;
-    top: -5%;
-    height: 100px;
-    left: -18%;
+	grid-column: 1/1;
+	position: relative;
+	top: -5%;
+	height: 100px;
+	left: -18%;
 
 }
 
 
 .info_text {
-    font-size: 0.5em;
+	font-size: 0.5em;
+	margin: 0 15px;
+	grid-column: 2/3;
+	width: 150%;
 }
 
 .info_head {
-    grid-column: 2/ span 1;
-    font-size: 1.2em;
-    text-align: center;
-    height: 25px;
-    z-index: 50;
+	grid-column: 2/ span 1;
+	font-size: 1.2em;
+	text-align: center;
+	height: 25px;
+	z-index: 50;
 }
 
 .indhold {
-    padding: 5px;
-    background-color: #e4e3e2;
-    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-    border: 1px solid black;
-    width: 150%;
-    grid-column: span 2;
-    z-index: 100;
+	padding: 5px;
+	background-color: #e4e3e2;
+	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+	border: 1px solid black;
+	width: 150%;
+	grid-column: span 2;
+	z-index: 100;
 }
 
 .materialer_pil {
-    position: absolute;
-    width: 11%;
-    left: 33%;
-    top: 288%;
+	position: absolute;
+	width: 10vw;
+	left: 29vw;
+	top: 132vw;
 }
 
 .info_icon_small {
 
-    grid-column: 1/ span 1;
-    width: 103%;
-    margin: -12px 24px;
+	grid-column: 1/ span 1;
+	width: 103%;
+	margin: -12px 24px;
 }
 
 .change {
-    margin: -16px 18px;
-    width: 120%;
+	margin: -16px 18px;
+	width: 120%;
+}
+
+@media only screen and (min-width: 2400px) and (max-width: 3000px) {
+	.materialer_pil {
+		left: 29vw;
+		top: 125vw;
+
+		transform: rotate(26deg);
+	}
+
+	.branding_pil {
+
+		left: 28vw;
+		top: 111.5vw;
+	}
+
+
+	.design_pil {
+		top: 119vw;
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 31vw;
+		top: 101.5vw;
+
+	}
+}
+
+
+@media only screen and (min-width: 2000px) and (max-width: 2400px) {
+	.materialer_pil {
+		left: 30vw;
+		top: 131vw;
+		transform: rotate(26deg);
+	}
+
+
+	.design_pil {
+
+		top: 123vw;
+
+
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 30vw;
+		top: 106.5vw;
+
+	}
+}
+
+@media only screen and (min-width: 1900px) and (max-width: 2000px) {
+	.materialer_pil {
+		left: 29vw;
+		top: 130vw;
+	}
+
+	.design_pil {
+		position: absolute;
+		top: 124vw;
+		width: 8vw;
+		transform: rotate(-11deg);
+		right: 35vw;
+	}
+	.design_pil {
+		top: 124vw;
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 30vw;
+		top: 106.5vw;
+
+	}
+}
+
+@media only screen and (min-width: 1800px) and (max-width: 1900px) {
+	.materialer_pil {
+		left: 30vw;
+		top: 133vw;
+		transform: rotate(26deg);
+	}
+
+	.branding_pil {
+		left: 29vw;
+		top: 118.5vw;
+	}
+
+
+
+	.design_pil {
+		top: 126vw;
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 30vw;
+		top: 108.5vw;
+
+	}
+}
+
+@media only screen and (min-width: 1700px) and (max-width: 1800px) {
+	.materialer_pil {
+		left: 30vw;
+		top: 135vw;
+		transform: rotate(26deg);
+	}
+
+	.branding_pil {
+		left: 29vw;
+		top: 119.9vw;
+	}
+
+
+
+	.design_pil {
+		top: 128vw;
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 30vw;
+		top: 110.5vw;
+
+	}
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1700px) {
+	.materialer_pil {
+		left: 30vw;
+		top: 137vw;
+		transform: rotate(26deg);
+	}
+
+	.branding_pil {
+		left: 29vw;
+		top: 121.9vw;
+	}
+
+
+
+	.design_pil {
+		top: 129.9vw;
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 30vw;
+		top: 112.5vw;
+
+	}
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1600px) {
+	.materialer_pil {
+		left: 30vw;
+		top: 139vw;
+		transform: rotate(26deg);
+	}
+
+	.branding_pil {
+		left: 29vw;
+		top: 123.9vw;
+	}
+
+
+
+	.design_pil {
+		top: 131.9vw;
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 30vw;
+		top: 114.5vw;
+
+	}
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1500px) {
+	.materialer_pil {
+		left: 30vw;
+		top: 141vw;
+		transform: rotate(26deg);
+	}
+
+	.branding_pil {
+		left: 29vw;
+		top: 125.9vw;
+	}
+
+
+
+	.design_pil {
+		top: 133.9vw;
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 30vw;
+		top: 116.5vw;
+
+	}
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+	.materialer_pil {
+		left: 30vw;
+		top: 146vw;
+		transform: rotate(26deg);
+	}
+
+	.branding_pil {
+		left: 29vw;
+		top: 128.9vw;
+	}
+
+
+
+	.design_pil {
+		top: 137.9vw;
+		right: 35vw;
+	}
+
+	.design_pil_glasur {
+		right: 30vw;
+		top: 119.5vw;
+
+	}
+}
+
+
+@media only screen and (max-width: 1300px) {
+	#infographic {
+		display: none;
+	}
+	.info_overskrift {
+		display: none;
+	}
+	.vase_titel {
+		display: none;
+	}
 }
