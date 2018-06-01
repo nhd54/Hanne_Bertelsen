@@ -2,128 +2,130 @@
 <html lang="">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="info.css">
-	<script src="script.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="info.css">
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title></title>
 </head>
 
 <body>
 
-	<section id="wrapper">
-		<header id="hovedmenu">
+    <section id="wrapper">
+        <header id="hovedmenu">
 
 
-		</header>
+        </header>
 
-		<article id="content" style="min-height:60vw;">
+        <article id="content" style="min-height:60vw;">
 
-			<section class="welcome"> </section>
+            <section class="welcome"> </section>
 
-			<section id="main_content">
-
-
-				<article class="butik">
-					<h1 class="overskrift_om">Om Hanne</h1>
-
-					<img class="butik_stort" src="image/forside.jpg">
-					<p class="butik_text">Jeg arbejder både med unika-værker og med keramik til brug i dagligdagen; i spændingsfeltet hvor det at mestre et håndværk og undersøge kunstneriske udtryk er hinandens forudsætninger. <br><br> Både på mine unika- og brugsting er formerne tilrettelagt og bearbejdet, så der er struktur, relief, riller, eller former, der giver glasurene mulighed for at lege og fremvise deres fabelagtige verden af farver, sprødhed og stoflighed.<br><br> Jeg arbejder samtidig med lyset. Både i form af lamper i porcelæn, men også med tyndt, gennemhullet porcelæn, så lysets gang over emnerne skaber endnu en dimension. Jeg vil gerne formidle det drømmende og alligevel genkendte ‘ur-univers’: vand, natur / evolution. Beskueren må gerne huske og undre sig.</p>
+            <section id="main_content">
 
 
-					<small class="citat">
+                <article class="butik">
+                    <h1 class="overskrift_om">Om Hanne</h1>
+
+                    <img class="butik_stort" src="image/forside.jpg">
+                    <p class="butik_text">Jeg arbejder både med unika-værker og med keramik til brug i dagligdagen; i spændingsfeltet hvor det at mestre et håndværk og undersøge kunstneriske udtryk er hinandens forudsætninger. <br><br> Både på mine unika- og brugsting er formerne tilrettelagt og bearbejdet, så der er struktur, relief, riller, eller former, der giver glasurene mulighed for at lege og fremvise deres fabelagtige verden af farver, sprødhed og stoflighed.<br><br> Jeg arbejder samtidig med lyset. Både i form af lamper i porcelæn, men også med tyndt, gennemhullet porcelæn, så lysets gang over emnerne skaber endnu en dimension. Jeg vil gerne formidle det drømmende og alligevel genkendte ‘ur-univers’: vand, natur / evolution. Beskueren må gerne huske og undre sig.</p>
+
+
+                    <small class="citat">
 				    <blockquote class="om_hanne_citat">Jeg vil gerne, at hver ting har sine egen nerve. Man skal kunne se at keramikken er håndlavet, så en lille ‘fejl’ – eksempelvis en farveplet eller en skævhed – kan være velkommen</blockquote>
 					</small>
 
 
 
-					<img src="image/om_banner.jpg" alt="" class="map">
-					<p class="butik_text">
+                    <img src="image/om_banner.jpg" alt="" class="map">
+                    <p class="butik_text">
 
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quo adipisci neque officia amet expedita ut, aperiam nesciunt necessitatibus vitae, quod provident aspernatur harum non, dignissimos laborum tenetur. Quasi, nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis minima alias facilis, necessitatibus placeat id, at, molestias totam fugiat, ipsam dolorem! Dignissimos quod corrupti quos, fugit vero! Aperiam, unde, architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo labore eum fugiat exercitationem possimus adipisci ducimus voluptatum beatae, voluptates illo doloremque dolorem error ex, neque impedit quibusdam nam officia sit!
-					</p>
-					<img class="butik_stort" src="image/forside.jpg">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quo adipisci neque officia amet expedita ut, aperiam nesciunt necessitatibus vitae, quod provident aspernatur harum non, dignissimos laborum tenetur. Quasi, nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis minima alias facilis, necessitatibus placeat id, at, molestias totam fugiat, ipsam dolorem! Dignissimos quod corrupti quos, fugit vero! Aperiam, unde, architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo labore eum fugiat exercitationem possimus adipisci ducimus voluptatum beatae, voluptates illo doloremque dolorem error ex, neque impedit quibusdam nam officia sit!
+                    </p>
+                    <img class="butik_stort" src="image/forside.jpg">
 
+                    <h1 class="overskrift_om">Hannes Håndværks Anatomi</h1>
 
-					<div id="infographic">
+                    <p class="vase_titel">Tryk på de forskellige punkter for at læse mere</p>
+                    <div id="infographic">
 
-					</div>
+                    </div>
 
-				</article>
-
-
-			</section>
-
-		</article>
-
-	</section>
-
-	<footer>
-
-	</footer>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", Hentinfographic);
-		async function Hentinfographic() {
-
-			let infographicData = await fetch("infographic.html");
-			let infographic = await infographicData.text();
-			document.querySelector("#infographic").innerHTML = infographic;
+                </article>
 
 
-			$(".branding").hide();
-			$(".glasur").hide();
-			$(".materialer").hide();
-			$(".design").hide();
+            </section>
 
-			$('.glasur_header').click(showinfo("glasur", "top"));
-			$('.info_glasur').mouseleave(disableinfo("glasur", "top"));
-			$('#top').click(showinfo("glasur", "top"));
-			$('#top').mouseleave(disableinfo("glasur", "top"));
+        </article>
 
+    </section>
 
-			$('.design').click(showinfo("desgin", "nr3"));
-			$('.info_design').mouseleave(disableinfo("design", "nr3"));
-			$('#nr3').click(showinfo("design", "nr3"));
-			$('#nr3').mouseleave(disableinfo("design", "nr3"));
+    <footer>
 
-			$('.branding_header').click(showinfo("branding", "nr2"));
-			$('.info_branding').mouseleave(disableinfo("branding", "nr2"));
-			$('#nr2').click(showinfo("branding", "nr2"));
-			$('#nr2').mouseleave(disableinfo("branding", "nr2"));
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", Hentinfographic);
+        async function Hentinfographic() {
+
+            let infographicData = await fetch("infographic.html");
+            let infographic = await infographicData.text();
+            document.querySelector("#infographic").innerHTML = infographic;
 
 
-			$('.materialer_header').click(showinfo("materialer", "bund_1_"));
-			$('.info_materialer').mouseleave(disableinfo("materialer", "bund_1_"));
-			$('#bund_1_').click(showinfo("materialer", "bund_1_"));
-			$('#bund_1_').mouseleave(disableinfo("materialer", "bund_1_"));
+            $(".branding").hide();
+            $(".glasur").hide();
+            $(".materialer").hide();
+            $(".design").hide();
+
+            $('.glasur_header').click(showinfo("glasur", "top"));
+            $('.info_glasur').mouseleave(disableinfo("glasur", "top"));
+            $('#top').click(showinfo("glasur", "top"));
+            $('#top').mouseleave(disableinfo("glasur", "top"));
 
 
-			function showinfo(box1, vase1) {
-				return function() {
-					console.log("jeg vil gerne virke nu");
-					console.log(box1);
-					$("." + box1).slideDown("slow");
-					$("#" + vase1).css("fill", "#4A1B25")
-				}
+            $('.design').click(showinfo("desgin", "nr3"));
+            $('.info_design').mouseleave(disableinfo("design", "nr3"));
+            $('#nr3').click(showinfo("design", "nr3"));
+            $('#nr3').mouseleave(disableinfo("design", "nr3"));
 
-			}
+            $('.branding_header').click(showinfo("branding", "nr2"));
+            $('.info_branding').mouseleave(disableinfo("branding", "nr2"));
+            $('#nr2').click(showinfo("branding", "nr2"));
+            $('#nr2').mouseleave(disableinfo("branding", "nr2"));
 
 
-			function disableinfo(box, vase) {
-				return function() {
-					console.log("jeg er klikket som en test");
+            $('.materialer_header').click(showinfo("materialer", "bund_1_"));
+            $('.info_materialer').mouseleave(disableinfo("materialer", "bund_1_"));
+            $('#bund_1_').click(showinfo("materialer", "bund_1_"));
+            $('#bund_1_').mouseleave(disableinfo("materialer", "bund_1_"));
 
-					$("." + box).slideUp("slow");
-					$("#" + vase).css("fill", "#9F6166")
-				}
 
-			}
+            function showinfo(box1, vase1) {
+                return function() {
+                    console.log("jeg vil gerne virke nu");
+                    console.log(box1);
+                    $("." + box1).slideDown("slow");
+                    $("#" + vase1).css("fill", "#4A1B25")
+                }
 
-		}
-	</script>
+            }
+
+
+            function disableinfo(box, vase) {
+                return function() {
+                    console.log("jeg er klikket som en test");
+
+                    $("." + box).slideUp("slow");
+                    $("#" + vase).css("fill", "#9F6166")
+                }
+
+            }
+
+        }
+    </script>
 
 
 </body>

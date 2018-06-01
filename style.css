@@ -389,7 +389,7 @@ footer ul {
 .butik_stort {
     grid-column: span 6;
     width: 100%;
-    margin: 1vw 0 0 0;
+    margin: 4vw 0 3vw 0;
     -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
@@ -963,6 +963,13 @@ blockquote:after {
     font-size: 1.5em;
     color: #E4E2E3;
 
+}
+
+.vase_titel {
+    margin: 0px 0 0 12vw;
+    font-size: 0.7em;
+    color: #4E4A51;
+    grid-column: 4 / span 6;
 }
 
 
