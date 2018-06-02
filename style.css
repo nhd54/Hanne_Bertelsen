@@ -856,7 +856,7 @@ blockquote:after {
 
 	.welcome {
 		width: 100%;
-		height: 110vw;
+		height: auto;
 	}
 
 	.welcome .forside_produkt,
