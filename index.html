@@ -46,40 +46,19 @@
 
 
 				<div class="slideshow-container">
-
-					<div class="mySlides fade">
-						<div class="numbertext">1 / 3</div>
-						<img src="image/banner1.jpg" style="width: 100%;
-    max-height: 27VW;">
-						<div class="text"></div>
+					<div class="slider" id="main-slider">
+						<!-- outermost container element -->
+						<div class="slider-wrapper">
+							<!-- innermost wrapper element -->
+							<img src="image/banner1.jpg" alt="First" class="slide" style="width: 100%;
+    max-height: 27VW;" />
+							<!-- slides -->
+							<img src="image/banner2.jpg" alt="Second" class="slide" style="width: 100%;
+    max-height: 27VW;" />
+							<img src="image/banner3.jpg" alt="Third" class="slide" style="width: 100%;
+    max-height: 27VW;" />
+						</div>
 					</div>
-
-					<div class="mySlides fade">
-						<div class="numbertext">2 / 3</div>
-						<img src="image/banner2.jpg" style="width: 100%;
-   max-height: 27VW;">
-						<div class="text"></div>
-					</div>
-
-					<div class="mySlides fade">
-						<div class="numbertext">3 / 3</div>
-						<img src="image/banner3.jpg" style="width: 100%;
-    max-height: 27VW;">
-						<div class="text"></div>
-					</div>
-
-
-
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-				</div>
-				<br>
-
-				<div style="text-align:center; grid-row-start:2; grid-column:6/8;">
-					<span class="dot" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
 				</div>
 
 
@@ -167,37 +146,72 @@
 			}
 		}
 
-		var slideIndex = 1;
-		showSlides(slideIndex);
+		(function() {
 
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
+			function Slideshow(element) {
+				this.el = document.querySelector(element);
+				this.init();
+			}
 
-		function currentSlide(n) {
-			showSlides(slideIndex = n);
-		}
+			Slideshow.prototype = {
+				init: function() {
+					this.wrapper = this.el.querySelector(".slider-wrapper");
+					this.slides = this.el.querySelectorAll(".slide");
+					this.previous = this.el.querySelector(".slider-previous");
+					this.next = this.el.querySelector(".slider-next");
+					this.index = 0;
+					this.total = this.slides.length;
+					this.timer = null;
 
-		function showSlides(n) {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
-			if (n > slides.length) {
-				slideIndex = 1
-			}
-			if (n < 1) {
-				slideIndex = slides.length
-			}
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-			}
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
-		}
+					this.action();
+					this.stopStart();
+				},
+				_slideTo: function(slide) {
+					var currentSlide = this.slides[slide];
+					currentSlide.style.opacity = 1;
 
+					for (var i = 0; i < this.slides.length; i++) {
+						var slide = this.slides[i];
+						if (slide !== currentSlide) {
+							slide.style.opacity = 0;
+						}
+					}
+				},
+				action: function() {
+					var self = this;
+					self.timer = setInterval(function() {
+						self.index++;
+						if (self.index == self.slides.length) {
+							self.index = 0;
+						}
+						self._slideTo(self.index);
+
+					}, 3000);
+				},
+				stopStart: function() {
+					var self = this;
+					self.el.addEventListener("mouseover", function() {
+						clearInterval(self.timer);
+						self.timer = null;
+
+					}, false);
+					self.el.addEventListener("mouseout", function() {
+						self.action();
+
+					}, false);
+				}
+
+
+			};
+
+			document.addEventListener("DOMContentLoaded", function() {
+
+				var slider = new Slideshow("#main-slider");
+
+			});
+
+
+		})();
 	</script>
 </body>
 
