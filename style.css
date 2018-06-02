@@ -18,8 +18,8 @@
 #wrapper {
 	display: grid;
 	grid-template-rows: 4vw auto 10vw;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: auto;
 	background-image: url(image/baggrund.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -28,12 +28,12 @@
 }
 
 header {
-	grid-row: 1/2;
-	width: 100%;
+	grid-row: 1/1;
+	width: 100vw;
 	height: 35px;
 	background-color: #e4e2e3;
 	display: grid;
-	grid-template-columns: repeat (12, 1fr);
+	grid-template-columns: repeat(12, 1fr);
 	position: fixed;
 }
 
@@ -350,6 +350,7 @@ nav {
 
 footer {
 	display: grid;
+	grid-row: 3/3;
 	grid-template-columns: repeat(12, 8%);
 	grid-gap: 0.37%;
 	background-color: #e4e2e3;
@@ -828,6 +829,9 @@ blockquote:after {
 		width: 78%;
 		margin: 0;
 	}
+	#wrapper {
+		min-height: 198vw;
+	}
 
 	blockquote:before {
 		display: block;
@@ -845,11 +849,11 @@ blockquote:after {
 		display: block;
 		padding-left: 10px;
 		content: "\201D";
-		font-size: 4.5vw;
+		font-size: 55px;
 		position: absolute;
-		left: 539px;
-		top: 47px;
-		color: #E4E2E3;
+		left: 167px;
+		top: 83px;
+		color: #4E4A51;
 	}
 
 
@@ -857,6 +861,11 @@ blockquote:after {
 	.welcome {
 		width: 100%;
 		height: auto;
+
+	}
+
+	.icon_billede img {
+		height: 10.5vw;
 	}
 
 	.welcome .forside_produkt,
@@ -1022,162 +1031,174 @@ blockquote:after {
 
 	header {
 		background-color: transparent;
-	}
-
-	.small_img {
-		grid-column: span 6;
-		width: 100%;
-		height: 250px;
-	}
-
-	.big_img {
-		grid-column: span 6;
-		width: 100%;
-		height: 250px;
-	}
-
-	.produkt {
-		grid-column: span 3;
-	}
-
-	.produkter {
+		grid-row: 1/1;
+		width: 100vw;
+		height: 35px;
 		display: grid;
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: repeat(12, 8.3%);
+		position: fixed;
 	}
-
-	.butik_stort {
-		grid-column: span 12;
-		width: 100%;
-	}
+}
 
 
 
-	.butik_text {
-		grid-column: span 12;
-		color: #4E4A51;
-		width: 100%;
-		margin: 0;
-		margin-top: 5%;
-	}
+.small_img {
+	grid-column: span 6;
+	width: 100%;
+	height: 250px;
+}
 
-	.citat {
-		grid-column: 3 / 11;
-		text-align: center;
-		width: 100%;
-		margin: 50px 0;
+.big_img {
+	grid-column: span 6;
+	width: 100%;
+	height: 250px;
+}
 
+.produkt {
+	grid-column: span 3;
+}
 
-	}
-	.some {
-		grid-column: span 3;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
+.produkter {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
 
-	.some img {
-		width: 100%;
-		grid-column: span 1;
-	}
-
+.butik_stort {
+	grid-column: span 12;
+	width: 100%;
+}
 
 
-	.footermenu {
-		grid-column: 5/6;
-		margin: 70%;
 
-	}
+.butik_text {
+	grid-column: span 12;
+	color: #4E4A51;
+	width: 100%;
+	margin: 0;
+	margin-top: 5%;
+}
 
-	.footermenu a {}
-	.event_billede {
-		grid-column: span 12;
-		-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-		box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-
-	}
-
-	.beskrivelse {
-		grid-column: span 10;
-	}
-	.enkelt_produkt {
-		width: 100%;
-		margin: 0 auto;
-	}
+.citat {
+	grid-column: 3 / 11;
+	text-align: center;
+	width: 100%;
+	margin: 50px 0;
 
 
-	.enkelt_produkt .produkt {
-		grid-column: span 3;
+}
 
-	}
+.some {
+	grid-column: span 3;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
 
-	.stortbillede {
-		grid-column: span 3;
-	}
-
-	.stortbillede img {
-		width: 100%;
-
-	}
-
-	.icon_produkt {
-		width: 50%;
-		grid-column: span 1;
-
-	}
+.some img {
+	width: 100%;
+	grid-column: span 1;
+}
 
 
-	.produkt p {
-		margin: 10px;
-	}
 
-	.produkt img {}
+.footermenu {
+	grid-column: 5/6;
+	margin: 70%;
 
-	.produkt_hidden p {
-		width: 90%;
+}
 
-	}
+.footermenu a {}
 
-	.lille_billede1 img,
-	.lille_billede2 img,
-	.lille_billede3 img {
-		grid-column: span 1;
-		width: 92%;
-		margin: 5px;
+.event_billede {
+	grid-column: span 12;
+	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 
-	}
+}
 
-	.billede1,
-	.billede2,
-	.billede3 {
-		width: 100%;
-		-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-		box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	}
+.beskrivelse {
+	grid-column: span 10;
+}
 
-	.billede2 {
-		grid-column: 2/3;
-	}
+.enkelt_produkt {
+	width: 100%;
+	margin: 0 auto;
+}
 
-	.krukke {
-		grid-column: 9/12;
-		margin-top: 10px;
-	}
 
-	.ikon_status_billede {
-		position: absolute;
-		z-index: 2;
-		width: 13vw;
-		margin-left: 65vw;
+.enkelt_produkt .produkt {
+	grid-column: span 3;
 
-	}
+}
 
-	.ikon_status_billede_produkt {
-		position: absolute;
-		z-index: 2;
-		width: 13vw;
-		margin-left: 63vw;
+.stortbillede {
+	grid-column: span 3;
+}
 
-	}
+.stortbillede img {
+	width: 100%;
+
+}
+
+.icon_produkt {
+	width: 50%;
+	grid-column: span 1;
+
+}
+
+
+.produkt p {
+	margin: 10px;
+}
+
+.produkt img {}
+
+.produkt_hidden p {
+	width: 90%;
+
+}
+
+.lille_billede1 img,
+.lille_billede2 img,
+.lille_billede3 img {
+	grid-column: span 1;
+	width: 92%;
+	margin: 5px;
+
+}
+
+.billede1,
+.billede2,
+.billede3 {
+	width: 100%;
+	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+}
+
+.billede2 {
+	grid-column: 2/3;
+}
+
+.krukke {
+	grid-column: 9/12;
+	margin-top: 10px;
+}
+
+.ikon_status_billede {
+	position: absolute;
+	z-index: 2;
+	width: 13vw;
+	margin-left: 65vw;
+
+}
+
+.ikon_status_billede_produkt {
+	position: absolute;
+	z-index: 2;
+	width: 13vw;
+	margin-left: 63vw;
+
+}
 
 }
