@@ -68,7 +68,7 @@
 
 
 			</section>
-			<section class="welcome">
+			<section class="welcome homepage">
 				<h1 class="navn_index">Hanne Bertelsen</h1>
 				<p class="titel">Keramiker</p>
 				<img src="image/hanne_logo-light.svg" class="logo_forsiden" alt="Hanne´s logo i stort billed">
@@ -143,8 +143,10 @@
 					let panel = this.nextElementSibling;
 					if (panel.style.display === "inline-block") {
 						panel.style.display = "none";
+						document.querySelector(".slideshow-container").style.display = "block";
 					} else {
 						panel.style.display = "inline-block";
+						document.querySelector(".slideshow-container").style.display = "none";
 					}
 				});
 			}
@@ -216,6 +218,7 @@
 
 
 		})();
+
 	</script>
 </body>
 

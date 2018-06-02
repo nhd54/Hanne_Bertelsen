@@ -6,3 +6,14 @@
     font-style: normal;
 }
 
+
+.homepage_welcome {
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    width: 55%;
+    height: auto;
+}
+
+
+
