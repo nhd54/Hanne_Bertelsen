@@ -8,6 +8,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="script.js"></script>
+	<link rel="shortcut icon" type="image/png" href="image/favicon.png" />
 	<meta description="se alt Hanne Bertelsen håndlavet keramik i en lang liste af kunsthåndværker du finder alt lige fra unika til lysetager & lamper">
 
 	<title>Produkter</title>
@@ -22,6 +23,9 @@
 		</header>
 
 		<article id="content" style="min-height:60vw;">
+
+
+
 
 			<section class="welcome"> </section>
 
@@ -94,7 +98,14 @@
 
 		document.addEventListener("DOMContentLoaded", hentJson);
 
+
+
+
 		async function hentJson() {
+
+
+
+
 
 
 			// oprettet en variable dataJson som bruger vores variable jsonUrl ovenover og læser den hele igennem
@@ -197,14 +208,26 @@
 
 
 				});
+
 				// så bliver der lavet en kort if / else sætning til at vise vores ikon til billedet afhængelig af om produktet
 				// kan købet i webshoppen, butikken eller kan bestilles
 				if (produkt.acf.status == "webshop") {
 					klon.querySelector(".ikon_status_billede").src = "ikoner_nye/kurv_icon.svg";
+
+					klon.querySelector(".ikon_status_billede").addEventListener("click", () => {
+						document.querySelector(".mockup_billede").style.display = "block";
+					});
+
 				} else if (produkt.acf.status == "butik") {
 					klon.querySelector(".ikon_status_billede").src = "ikoner_nye/butik_icon.svg";
+					klon.querySelector(".ikon_status_billede").addEventListener("click", () => {
+						document.querySelector(".mockup_billede").style.display = "block";
+					});
 				} else {
 					klon.querySelector(".ikon_status_billede").src = "ikoner_nye/bestilling_icon.svg";
+					klon.querySelector(".ikon_status_billede").addEventListener("click", () => {
+						document.querySelector(".mockup_billede").style.display = "block";
+					});
 				}
 				// her bliver der tilføjet 3 prikker til vores rest variable sådan så alle sætninger som bliver cutted slutter med "..."
 				klon.querySelector("p").innerHTML = rest + "...";

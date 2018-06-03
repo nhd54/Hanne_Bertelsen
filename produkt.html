@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
 	<title>Produkter</title>
+	<link rel="shortcut icon" type="image/png" href="image/favicon.png" />
 	<meta description="se hendes flotte håndlavet keramik her og find alt den information om dette flotte kunsthåndævrk">
 </head>
 
@@ -19,6 +20,11 @@
 		</header>
 
 		<article id="content" style="min-height:60vw;">
+
+			<div class="mockup_billede">
+				<img src="image/img_56707.png" class="leave_button" alt="">
+				<img src="image/inkoebssideHB.png" class="mockup_billede_img" alt="mockup indkøb">
+			</div>
 
 			<section class="welcome"> </section>
 
@@ -110,11 +116,23 @@
 					klon.querySelector(".materiale").innerHTML = "materiale: <br>" + enkelt_produkt.acf.materiale;
 					klon.querySelector(".pris").innerHTML = "pris: <br>" + enkelt_produkt.acf.pris + ",-";
 					//klon.querySelector(".pris").setAttribute
+					klon.querySelector(".ikon_status_billede_produkt").addEventListener("click", () => {
+						document.querySelector(".mockup_billede").style.display = "block";
+					});
+					document.querySelector(".leave_button").addEventListener("click", () => {
+
+						document.querySelector(".mockup_billede").style.display = "none";
+
+
+					});
+
+
 					display.appendChild(klon);
 				}
 			})
 
 		}
+
 	</script>
 </body>
 

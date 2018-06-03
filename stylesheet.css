@@ -1,19 +1,16 @@
 @font-face {
-    font-family: 'Bookman Old Style';
-    src: url('BookmanOldStyle.woff2') format('woff2'),
-        url('BookmanOldStyle.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+	font-family: 'Bookman Old Style';
+	src: url('BookmanOldStyle.woff2') format('woff2'),
+	url('BookmanOldStyle.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
 }
 
 
 .homepage_welcome {
-    margin: 0 auto;
-    display: grid;
-    justify-items: center;
-    width: 55%;
-    height: auto;
+	margin: 0 auto;
+	display: grid;
+	justify-items: center;
+	width: 55%;
+	height: auto;
 }
-
-
-
