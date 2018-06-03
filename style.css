@@ -136,6 +136,9 @@ nav {
 	grid-template-columns: repeat(12, 8.33%);
 
 }
+#banner h1 {
+	display: none;
+}
 
 
 #content {
@@ -1272,4 +1275,12 @@ blockquote:after {
 .leave_button {
 	width: 3%;
 	float: right;
+}
+
+.buttons a {
+	text-align: center;
+	color: #4E4A51;
+	display: block;
+	font-size: 1.2em;
+	margin: 10px 0;
 }
