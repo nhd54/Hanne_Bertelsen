@@ -88,9 +88,13 @@
 					console.log(klon);
 					klon.querySelector("h2").innerHTML = enkelt_produkt.title.rendered;
 					klon.querySelector(".stortbillede").src = enkelt_produkt.better_featured_image.media_details.sizes.medium.source_url;
+					klon.querySelector(".stortbillede").alt = enkelt_produkt.better_featured_image.alt_text;
 					klon.querySelector(".billede1").src = enkelt_produkt.acf.billede1.url;
+					klon.querySelector(".billede1").alt = enkelt_produkt.acf.billede1.alt;
 					klon.querySelector(".billede2").src = enkelt_produkt.acf.billede2.url;
+					klon.querySelector(".billede2").alt = enkelt_produkt.acf.billede2.alt;
 					klon.querySelector(".billede3").src = enkelt_produkt.acf.billede3.url;
+					klon.querySelector(".billede3").alt = enkelt_produkt.acf.billede3.alt;
 					if (enkelt_produkt.acf.status == "webshop") {
 						klon.querySelector(".ikon_status_billede_produkt").src = "ikoner_nye/kurv_icon.svg";
 						//console.log("hej");
@@ -111,7 +115,6 @@
 			})
 
 		}
-
 	</script>
 </body>
 

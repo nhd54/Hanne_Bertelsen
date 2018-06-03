@@ -2,51 +2,51 @@
 <html lang="">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <meta description="se alt Hanne Bertelsen håndlavet keramik i en lang liste af kunsthåndværker du finder alt lige fra unika til lysetager & lamper">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<meta description="se alt Hanne Bertelsen håndlavet keramik i en lang liste af kunsthåndværker du finder alt lige fra unika til lysetager & lamper">
 
-    <title>Produkter</title>
+	<title>Produkter</title>
 </head>
 
 <body>
 
-    <section id="wrapper">
-        <header id="hovedmenu">
+	<section id="wrapper">
+		<header id="hovedmenu">
 
 
-        </header>
+		</header>
 
-        <article id="content" style="min-height:60vw;">
+		<article id="content" style="min-height:60vw;">
 
-            <section class="welcome"> </section>
+			<section class="welcome"> </section>
 
-            <section id="main_content">
+			<section id="main_content">
 
-                <div class="status">
-                    <div class="icon_billede">
-                        <img src="ikoner_nye/butik_icon.svg" alt="ikon der viser det kun kan købes i butikken"><br>
-                        <span>Kan købes i butik</span>
-                    </div>
-                    <div class="icon_billede">
-                        <img src="ikoner_nye/bestilling_icon.svg" alt="ikon der visser det kun kan købes på bestilling"><br>
-                        <span>Kun på bestilling</span>
-                    </div>
-                    <div class="icon_billede">
-                        <img src="ikoner_nye/kurv_icon.svg" alt="ikon der visser det kun kan købes i webshoppen"><br>
-                        <span>Kan købes i webshop</span>
-                    </div>
-                </div>
+				<div class="status">
+					<div class="icon_billede">
+						<img src="ikoner_nye/butik_icon.svg" alt="ikon der viser det kun kan købes i butikken"><br>
+						<span>Kan købes i butik</span>
+					</div>
+					<div class="icon_billede">
+						<img src="ikoner_nye/bestilling_icon.svg" alt="ikon der visser det kun kan købes på bestilling"><br>
+						<span>Kun på bestilling</span>
+					</div>
+					<div class="icon_billede">
+						<img src="ikoner_nye/kurv_icon.svg" alt="ikon der visser det kun kan købes i webshoppen"><br>
+						<span>Kan købes i webshop</span>
+					</div>
+				</div>
 
-                <div class="produkter">
+				<div class="produkter">
 
 
 
-                    <template>
+					<template>
 
 
 		<div class="produkt" data-produkt>
@@ -67,191 +67,211 @@
 
 
                </template>
-                </div>
-            </section>
+				</div>
+			</section>
 
-        </article>
+		</article>
 
-    </section>
-    <footer>
+	</section>
+	<footer>
 
-    </footer>
+	</footer>
 
-    <script>
-        let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter?per_page=100";
-        let produkter = [];
-        let display = document.querySelector(".produkter");
-        let template = document.querySelector("template");
+	<script>
+		// her bliver der oprettet en variable jsonUrl som henter vores json direkte fra vores rest api (fra wordpress)
+		let jsonUrl = "http://designstorm.dk/kea/2-semester-eksamen/wordpress/wp-json/wp/v2/produkter?per_page=100";
 
-        document.addEventListener("DOMContentLoaded", hentJson);
+		// oprettet en tom variable ved navn produkter som vi vil bruge senere
+		let produkter = [];
 
-        async function hentJson() {
+		// oprettet en variable ved navn "display" som vores til at hente den html class,
+		// som vi gerne vil visse vores produkter hentet med rest api
+		let display = document.querySelector(".produkter");
 
+		// oprettet en variable ved navn "template" som vores til at hente den html class,
+		// som vi gerne vil visse vores produkter hentet med rest api
+		let template = document.querySelector("template");
 
+		document.addEventListener("DOMContentLoaded", hentJson);
 
-            let dataJson = await fetch(jsonUrl);
-            produkter = await dataJson.json();
-            lavfiltre();
-
-
-
-            // her bliver der lavet en function som bliver kaldt når der bliver musset henover html-classen "do_something"
-            $('.do_something').on('mouseenter', function() {
-                // her bliver der oprettet en variable med navnet "name"
-                // den finder den ting som er blevet musset over(ovenover) og finder den tætteste html-cass ".produkt"
-                // derinde finder den html classen "stortbillede" og finder dens nuværehnde src (altså nuværende billed)
-                var name = $(this).closest('.produkt').find('.stortbillede').attr("src");
-
-                // her bliver der oprettet en variable med navnet imagePath
-                // den linker til det sted hvor vi henter alle vores billeder
-                // i dette tilfælde på domænet "designstorm.dk" inde i en wordpress mappe
-                var imagePath = 'http://www.designstorm.dk/kea/2-semester-eksamen/wordpress/wp-content/uploads/2018/05/';
+		async function hentJson() {
 
 
-                // her oprettes en variable med navn  imageSource som finder "this"
-                // som er den "do_something" som bliver musset over og giver os navnet på dens img src
-                var imageSource = $(this).attr('src');
-
-                // her oprettes vores variable imagePathAndFilename som bruger den ovenover oprettet variable
-                // her tilføjer vi til den variable en lastindex (som er det sidste tegn i linjen) og giver den en "/" for at lukke linket
-                // +1 er for at gøre det efter vores lastindex (hvis du droppet +1 vil "/" erstatte det sidste tegn i imageSource )
-                var imagePathAndFilename = imageSource.lastIndexOf("/") + 1;
-
-                // her oprettes variablen imageFilename som bruger vores oprettet variable ovenover
-                // imagePathAndFilename til at give os en sætning med navnet på billedet
-
-                var imageFilename = imageSource.substr(imagePathAndFilename);
-                // til sidst laver vi så et kald og bruger vores variabler, (som stadig sker når function i vores mouseenter sker)
-                // her finder vi først "this" som er den "do_something" som er peget på og finder det tætteste "stortbillede"
-                // som den tildeler den en src som bruger vores 2 oprettet variabler ovenover nemlig imagePath & imageFilename
-                // og gør dem til en lang sætning som dermed gør det til en img src som finder udaf hvor den skal finde billedet
-                // udfra hvilken "do_something vi muser over"
-                $(this).closest('.produkt').find('.stortbillede').attr('src', imagePath + imageFilename);
-
-
-                // og her opretter vi tilsidst en ny function på mouseout (altså når mussen forlader classen "do_something")
-
-                $('.do_something').on('mouseout', function() {
-
-                    // og der finder vi igen den "do_something" som vi har musset over og dykker dybt ned for at finde det tætteste ".stortbillede"
-                    // den giver vi så den første oprettet variable som ses længere oppe ved navn "name" som nemlig gemmer det orginale billednavn
-                    // på denne måde kan vi på mouseout give den sit orginale billede tilbage
-                    $(this).closest('.produkt').find('.stortbillede').attr('src', name);
-                })
-                // vi har derfor skabt en dynamisk mouseenter / mouseleave som skifter billeder på vores produkter alt efter hvilket produkt det
-                // imellem de forskelige produkter der nu engang er at finde på siden
-
-            })
-        }
+			// oprettet en variable dataJson som bruger vores variable jsonUrl ovenover og læser den hele igennem
+			let dataJson = await fetch(jsonUrl);
+			// her giver vi så informationen fra ovenover lavet variable og giver til vores ovenover nævnte variable produkter
+			// og læser hele vores ovenover lavet variable igennem, når den er læst igennem bliver det lavet til en json
+			produkter = await dataJson.json();
+			lavfiltre();
 
 
 
+			// her bliver der lavet en function som bliver kaldt når der bliver musset henover html-classen "do_something"
+			$('.do_something').on('mouseenter', function() {
+				// her bliver der oprettet en variable med navnet "name"
+				// den finder den ting som er blevet musset over(ovenover) og finder den tætteste html-cass ".produkt"
+				// derinde finder den html classen "stortbillede" og finder dens nuværehnde src (altså nuværende billed)
+				var name = $(this).closest('.produkt').find('.stortbillede').attr("src");
+
+				// her bliver der oprettet en variable med navnet imagePath
+				// den linker til det sted hvor vi henter alle vores billeder
+				// i dette tilfælde på domænet "designstorm.dk" inde i en wordpress mappe
+				var imagePath = 'http://www.designstorm.dk/kea/2-semester-eksamen/wordpress/wp-content/uploads/2018/05/';
 
 
+				// her oprettes en variable med navn  imageSource som finder "this"
+				// som er den "do_something" som bliver musset over og giver os navnet på dens img src
+				var imageSource = $(this).attr('src');
 
-        function hentProdukter(produkter) {
-            produkter.forEach(produkt => {
+				// her oprettes vores variable imagePathAndFilename som bruger den ovenover oprettet variable
+				// her tilføjer vi til den variable en lastindex (som er det sidste tegn i linjen) og giver den en "/" for at lukke linket
+				// +1 er for at gøre det efter vores lastindex (hvis du droppet +1 vil "/" erstatte det sidste tegn i imageSource )
+				var imagePathAndFilename = imageSource.lastIndexOf("/") + 1;
 
-                console.log(produkter);
+				// her oprettes variablen imageFilename som bruger vores oprettet variable ovenover
+				// imagePathAndFilename til at give os en sætning med navnet på billedet
 
-
-
-                let str = produkt.content.rendered;
-                let rest = str.substr(0, 90)
-                let klon = template.cloneNode(true).content;
-
-                console.log(klon);
-                klon.querySelector("h2").innerHTML = produkt.title.rendered;
-                klon.querySelector(".stortbillede").src = produkt.better_featured_image.media_details.sizes.medium.source_url;
-                klon.querySelector(".lille_billede1").src = produkt.acf.billede1.url;
-                klon.querySelector(".lille_billede2").src = produkt.acf.billede2.url;
-                klon.querySelector(".lille_billede3").src = produkt.acf.billede3.url;
-
-                if (produkt.acf.status == "webshop") {
-                    klon.querySelector(".ikon_status_billede").src = "ikoner_nye/kurv_icon.svg";
-                    //console.log("hej");
-                } else if (produkt.acf.status == "butik") {
-                    klon.querySelector(".ikon_status_billede").src = "ikoner_nye/butik_icon.svg";
-                } else {
-                    klon.querySelector(".ikon_status_billede").src = "ikoner_nye/bestilling_icon.svg";
-                }
-
-                klon.querySelector("p").innerHTML = rest + "...";
-
-                klon.querySelector(".produkt").addEventListener("click", () => {
-                    location.href = "produkt.html?produkt=" + produkt.id;
+				var imageFilename = imageSource.substr(imagePathAndFilename);
+				// til sidst laver vi så et kald og bruger vores variabler, (som stadig sker når function i vores mouseenter sker)
+				// her finder vi først "this" som er den "do_something" som er peget på og finder det tætteste "stortbillede"
+				// som den tildeler den en src som bruger vores 2 oprettet variabler ovenover nemlig imagePath & imageFilename
+				// og gør dem til en lang sætning som dermed gør det til en img src som finder udaf hvor den skal finde billedet
+				// udfra hvilken "do_something vi muser over"
+				$(this).closest('.produkt').find('.stortbillede').attr('src', imagePath + imageFilename);
 
 
-                });
+				// og her opretter vi tilsidst en ny function på mouseout (altså når mussen forlader classen "do_something")
 
+				$('.do_something').on('mouseout', function() {
 
+					// og der finder vi igen den "do_something" som vi har musset over og dykker dybt ned for at finde det tætteste ".stortbillede"
+					// den giver vi så den første oprettet variable som ses længere oppe ved navn "name" som nemlig gemmer det orginale billednavn
+					// på denne måde kan vi på mouseout give den sit orginale billede tilbage
+					$(this).closest('.produkt').find('.stortbillede').attr('src', name);
+				})
+				// vi har derfor skabt en dynamisk mouseenter / mouseleave som skifter billeder på vores produkter alt efter hvilket produkt det
+				// imellem de forskelige produkter der nu engang er at finde på siden
 
-                display.appendChild(klon);
-
-
-            })
-
-
-        }
-
-
-        function lavfiltre() {
-            let urlParams = new URLSearchParams(window.location.search);
-            let urlid = urlParams.get("kategori");
-
-            console.log(urlid);
-
-
-            let vase = produkter.filter(produkt => produkt.acf.kategori == "Unika");
-            let potter = produkter.filter(produkt => produkt.acf.kategori == "Potter");
-            let skaale = produkter.filter(produkt => produkt.acf.kategori == "Skåle");
-            let fade = produkter.filter(produkt => produkt.acf.kategori == "Fade");
-            let lamper = produkter.filter(produkt => produkt.acf.kategori == "Lamper");
-            let lysestager = produkter.filter(produkt => produkt.acf.kategori == "Lysestager");
-            console.log(lysestager);
+			})
+		}
 
 
 
 
-            let single = produkter.find(produkt => {
-                if (urlid == "vase") {
-                    console.log("jeg er alle");
+
+		// her bliver der oprettet en function "hentprodukter" med et parameter "produkter"
+		function hentProdukter(produkter) {
+
+			// her laves der en forEach Loop for parameteret produkter og for hver gang
+			// der bliver talt et object i vores json array bliver der oprettet en variable ved navn produkt med tilhørende object
+			produkter.forEach(produkt => {
+
+				console.log(produkter);
+				// oprettet en variabe str som henter sin information vores variable produkt oprettet i foreach
+				// og henter så content.rendered i den json fil som der bliver læst i vores foreach
+				let str = produkt.content.rendered;
 
 
-                } else if (urlid == "potter") {
-                    console.log("jeg er forretter");
-                    display.innerHTML = "";
-                    hentProdukter(potter);
-                } else if (urlid == "Vase") {
-                    console.log("jeg er forretter");
-                    display.innerHTML = "";
-                    hentProdukter(vase);
-                } else if (urlid == "skåle") {
-                    console.log("jeg er skåle");
-                    display.innerHTML = "";
-                    hentProdukter(skaale);
-                } else if (urlid == "fade") {
-                    console.log("jeg er fade");
-                    display.innerHTML = "";
-                    hentProdukter(fade);
-                } else if (urlid == "lamper") {
-                    console.log("alle lamperne");
-                    display.innerHTML = "";
-                    hentProdukter(lamper);
-                } else if (urlid == "lysestager") {
-                    console.log("jeg er drikkevarer");
-                    display.innerHTML = "";
-                    hentProdukter(lysestager);
-                } else {
-                    console.log("jeg viser alle produkter");
-                    display.innerHTML = "";
-                    hentProdukter(produkter);
+				// oprettet en ny variable rest som giver vores ovenover nævnte variable en substring (bruges til at cutte scenen)
+				let rest = str.substr(0, 90)
 
-                }
-            });
-        }
+				// opretter en variable klon som kloner vores template variable ovenover
+				let klon = template.cloneNode(true).content;
 
-    </script>
+				console.log(klon);
+
+				// her bliver der til alle vores klon variable tildelt infomartion fra vores produkt variable i foreach
+				// som bliver tildelet alle vores html tags
+				klon.querySelector("h2").innerHTML = produkt.title.rendered;
+				klon.querySelector(".stortbillede").src = produkt.better_featured_image.media_details.sizes.medium.source_url;
+				klon.querySelector(".stortbillede").alt = produkt.better_featured_image.alt_text;
+				klon.querySelector(".lille_billede1").src = produkt.acf.billede1.url;
+				klon.querySelector(".lille_billede1").alt = produkt.acf.billede1.alt;
+				klon.querySelector(".lille_billede2").src = produkt.acf.billede2.url;
+				klon.querySelector(".lille_billede2").alt = produkt.acf.billede2.alt;
+				klon.querySelector(".lille_billede3").src = produkt.acf.billede3.url;
+				klon.querySelector(".lille_billede3").alt = produkt.acf.billede3.alt;
+
+				klon.querySelector(".produkt").addEventListener("click", () => {
+					location.href = "produkt.html?produkt=" + produkt.id;
+
+
+				});
+				// så bliver der lavet en kort if / else sætning til at vise vores ikon til billedet afhængelig af om produktet
+				// kan købet i webshoppen, butikken eller kan bestilles
+				if (produkt.acf.status == "webshop") {
+					klon.querySelector(".ikon_status_billede").src = "ikoner_nye/kurv_icon.svg";
+				} else if (produkt.acf.status == "butik") {
+					klon.querySelector(".ikon_status_billede").src = "ikoner_nye/butik_icon.svg";
+				} else {
+					klon.querySelector(".ikon_status_billede").src = "ikoner_nye/bestilling_icon.svg";
+				}
+				// her bliver der tilføjet 3 prikker til vores rest variable sådan så alle sætninger som bliver cutted slutter med "..."
+				klon.querySelector("p").innerHTML = rest + "...";
+				// til sidst tildeler vi vores oprettet variable "display" en appendchild som giver vores display class
+				// nogle html classes udfra vores klon variable som har cloned templaten i htmlen og løbet den igennem
+				// i vores foreach så der bliver oprettet vores produkt variable for hvergang vores foreach har læst et object i arrayet
+				display.appendChild(klon);
+			})
+		}
+
+
+		function lavfiltre() {
+			let urlParams = new URLSearchParams(window.location.search);
+			let urlid = urlParams.get("kategori");
+
+			console.log(urlid);
+
+
+			let vase = produkter.filter(produkt => produkt.acf.kategori == "Unika");
+			let potter = produkter.filter(produkt => produkt.acf.kategori == "Potter");
+			let skaale = produkter.filter(produkt => produkt.acf.kategori == "Skåle");
+			let fade = produkter.filter(produkt => produkt.acf.kategori == "Fade");
+			let lamper = produkter.filter(produkt => produkt.acf.kategori == "Lamper");
+			let lysestager = produkter.filter(produkt => produkt.acf.kategori == "Lysestager");
+			console.log(lysestager);
+
+
+
+
+			let single = produkter.find(produkt => {
+				if (urlid == "vase") {
+					console.log("jeg er alle");
+
+
+				} else if (urlid == "potter") {
+					console.log("jeg er forretter");
+					display.innerHTML = "";
+					hentProdukter(potter);
+				} else if (urlid == "Vase") {
+					console.log("jeg er forretter");
+					display.innerHTML = "";
+					hentProdukter(vase);
+				} else if (urlid == "skåle") {
+					console.log("jeg er skåle");
+					display.innerHTML = "";
+					hentProdukter(skaale);
+				} else if (urlid == "fade") {
+					console.log("jeg er fade");
+					display.innerHTML = "";
+					hentProdukter(fade);
+				} else if (urlid == "lamper") {
+					console.log("alle lamperne");
+					display.innerHTML = "";
+					hentProdukter(lamper);
+				} else if (urlid == "lysestager") {
+					console.log("jeg er drikkevarer");
+					display.innerHTML = "";
+					hentProdukter(lysestager);
+				} else {
+					console.log("jeg viser alle produkter");
+					display.innerHTML = "";
+					hentProdukter(produkter);
+
+				}
+			});
+		}
+	</script>
 </body>
 
 </html>
