@@ -169,7 +169,7 @@ nav {
 .produkt {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
+    cursor: pointer;
 }
 
 .produkt h2 {
