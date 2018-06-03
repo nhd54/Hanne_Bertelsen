@@ -1,13 +1,13 @@
 @font-face {
-	font-family: BookmanOldStyle;
-	src: url(BookmanOldStyle.woff2);
+    font-family: BookmanOldStyle;
+    src: url(BookmanOldStyle.woff2);
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	font-family: 'BookmanOldStyle', Calibri, Candara, Segoe, Segoe UI, Optima, Arial;
-	text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'BookmanOldStyle', Calibri, Candara, Segoe, Segoe UI, Optima, Arial;
+    text-decoration: none;
 }
 
 
@@ -16,78 +16,78 @@
 /********************    forside & overordnet css     **********************/
 
 #wrapper {
-	display: grid;
-	grid-template-rows: 4vw auto 5vw;
-	width: 100vw;
-	height: auto;
-	min-height: 158vh;
-	background-image: url(image/baggrund.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+    display: grid;
+    grid-template-rows: 4vw auto 5vw;
+    width: 100vw;
+    height: auto;
+    min-height: 158vh;
+    background-image: url(image/baggrund.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
 
 }
 
 header {
-	grid-row: 1/1;
-	width: 100vw;
-	height: 35px;
-	background-color: #e4e2e3;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	position: fixed;
+    grid-row: 1/1;
+    width: 100vw;
+    height: 35px;
+    background-color: #e4e2e3;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: fixed;
 }
 
 nav {
-	grid-column: 5/ span 6;
+    grid-column: 4/ span 6;
 }
 
 .om_slidedown {
-	display: none;
-	width: 10%;
-	margin-left: 2%;
-	position: absolute;
-	border-radius: 10%;
-	text-align: center;
-	background-color: #e4e2e3;
-	font-size: 1em;
+    display: none;
+    width: 10%;
+    margin-left: 2%;
+    position: absolute;
+    border-radius: 10%;
+    text-align: center;
+    background-color: #e4e2e3;
+    font-size: 1em;
 }
 
 .om_slidedown a li {
-	margin: 1vw 0 1vw 0;
-	font-size: 0.9em;
-	font-weight: 100;
+    margin: 1vw 0 1vw 0;
+    font-size: 0.9em;
+    font-weight: 100;
 }
 
 .produkt_tekst {
-	grid-column: span 6;
-	color: #4E4A51;
-	width: 89%;
-	font-size: 0.8em;
-	line-height: 1.2vw;
+    grid-column: span 6;
+    color: #4E4A51;
+    width: 89%;
+    font-size: 0.8em;
+    line-height: 1.2vw;
 }
 
 .produktudvalg {
-	display: none;
-	width: 10%;
-	position: absolute;
-	border-radius: 10%;
-	text-align: center;
-	background-color: #e4e2e3;
-	margin-left: 15.5%;
-	font-weight: normal;
+    display: none;
+    width: 10%;
+    position: absolute;
+    border-radius: 10%;
+    text-align: center;
+    background-color: #e4e2e3;
+    margin-left: 18.5%;
+    font-weight: normal;
 }
 
 .produktudvalg a li {
-	margin: 1vw 0 1vw 0;
-	font-size: 0.9em;
-	font-weight: 100;
+    margin: 1vw 0 1vw 0;
+    font-size: 0.9em;
+    font-weight: 100;
 }
 
 .produktudvalg li {
-	display: block;
-	margin: 20px;
+    display: block;
+    margin: 20px;
 }
 
 
@@ -95,181 +95,181 @@ nav {
 
 #normalMenu {
 
-	display: none;
+    display: none;
 
 }
 
 .vis_produkt:hover .produktudvalg {
-	display: block;
+    display: block;
 }
 
 .om:hover .om_slidedown {
-	display: block;
+    display: block;
 }
 
 
 
 .om_slidedown li {
-	display: block;
-	margin: 20px;
+    display: block;
+    margin: 20px;
 
 }
 
 .forside_om ul li {
-	margin: 1vw 0 1vw 0;
-	font-size: 0.9em;
-	font-weight: 100;
+    margin: 1vw 0 1vw 0;
+    font-size: 0.9em;
+    font-weight: 100;
 }
 
 .forside_produkt ul li {
-	margin: 1vw 0 1vw 0;
-	font-size: 0.9em;
-	font-weight: 100;
+    margin: 1vw 0 1vw 0;
+    font-size: 0.9em;
+    font-weight: 100;
 }
 
 #banner {
-	width: 100%;
-	margin-top: 2vw;
-	height: 30vw;
+    width: 100%;
+    margin-top: 2vw;
+    height: 30vw;
 
-	display: grid;
-	grid-template-columns: repeat(12, 8.33%);
+    display: grid;
+    grid-template-columns: repeat(12, 8.33%);
 
 }
 
 #banner h1 {
-	display: none;
+    display: none;
 }
 
 
 #content {
-	grid-row: 2/3;
+    grid-row: 2/3;
 
 }
 
 #main_content {
-	background-color: #e4e2e3;
-	width: 60%;
-	min-height: 40vw;
-	height: auto;
-	margin: 2vw auto;
-	padding: 2vw 3vw 3vw 3vw;
+    background-color: #e4e2e3;
+    width: 60%;
+    min-height: 40vw;
+    height: auto;
+    margin: 2vw auto;
+    padding: 2vw 3vw 3vw 3vw;
 }
 
 
 
 .produkter {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin-top: 5vw;
-	grid-template-rows: 10% auto;
-	grid-gap: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5vw;
+    grid-template-rows: 10% auto;
+    grid-gap: 45px;
 }
 
 .produkt {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
 }
 
 .produkt h2 {
-	grid-column: span 3;
-	color: #4E4A51;
-	font-size: 0.8em;
+    grid-column: span 3;
+    color: #4E4A51;
+    font-size: 0.8em;
 }
 
 .ikon_status_billede {
-	position: absolute;
-	z-index: 2;
-	width: 2vw;
-	margin: 1vw 0 0 22vw;
+    position: absolute;
+    z-index: 2;
+    width: 2vw;
+    margin: 1vw 0 0 22vw;
 
 }
 
 .stortbillede {
-	grid-column: span 3;
-	grid-row-start: 1;
-	width: 100%;
-	height: 200px;
-	margin-bottom: 1vw;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    grid-column: span 3;
+    grid-row-start: 1;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1vw;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 .produkt_hidden {
-	grid-column: span 3;
-	width: 100%;
-	display: none;
+    grid-column: span 3;
+    width: 100%;
+    display: none;
 
 }
 
 .image-wrapper {
-	display: flex;
-	width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .lille_billede1,
 .lille_billede2,
 .lille_billede3 {
-	width: 33%;
-	height: 33%;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    width: 33%;
+    height: 33%;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 
 
 
 .do_something {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 
 
 .ikon_status_billede_produkt {
-	position: absolute;
-	z-index: 2;
-	width: 3vw;
-	margin: 1vw 0 0 26vw;
+    position: absolute;
+    z-index: 2;
+    width: 3vw;
+    margin: 1vw 0 0 26vw;
 
 }
 
 .image-wrapper img {
-	margin: 2px;
+    margin: 2px;
 }
 
 
 .produkt:hover .produkt_hidden {
-	display: block;
+    display: block;
 }
 
 
 
 .produkt_ikon {
-	grid-column: span 3;
-	grid-row: 1/2;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	justify-items: center;
+    grid-column: span 3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
 .produkt_ikon img {
-	width: 20%;
+    width: 20%;
 }
 
 .enkelt_produkt .produkt {
-	grid-column: 2/3;
-	grid-gap: 15px;
+    grid-column: 2/3;
+    grid-gap: 15px;
 }
 
 .enkelt_produkt .produkt p {
-	width: 96%;
-	grid-column: span 3;
-	font-size: .8em;
-	line-height: 1;
-	font-family: 'BookmanOldStyle';
+    width: 96%;
+    grid-column: span 3;
+    font-size: .8em;
+    line-height: 1;
+    font-family: 'BookmanOldStyle';
 
 }
 
@@ -283,233 +283,233 @@ nav {
 .billede1,
 .billede2,
 .billede3 {
-	width: 100%;
-	grid-column: span 1;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    grid-column: span 1;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 .kategori a {
-	color: #4E4A51;
+    color: #4E4A51;
 }
 
 .info {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .events {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	margin-top: 2vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 2vw;
 }
 
 .event {
-	display: grid;
-	grid-template-columns: repeat(12, 8%);
-	grid-gap: 0.7%;
-	margin-bottom: 1vw;
+    display: grid;
+    grid-template-columns: repeat(12, 8%);
+    grid-gap: 0.7%;
+    margin-bottom: 1vw;
 }
 
 .event h2 {
-	text-align: left;
-	margin-left: 2vw;
-	width: 90%;
-	margin-top: 2vw;
-	color: #4E4A51;
-	font-size: 0.8em;
+    text-align: left;
+    margin-left: 2vw;
+    width: 90%;
+    margin-top: 2vw;
+    color: #4E4A51;
+    font-size: 0.8em;
 }
 
 .event_billede {
-	grid-column: span 5;
+    grid-column: span 5;
 }
 
 .event_billede img {
-	-webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
-	width: 100%;
+    -webkit-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 6px 10px 42px -5px rgba(0, 0, 0, 0.75);
+    width: 100%;
 }
 
 .beskrivelse {
-	grid-column: span 5;
+    grid-column: span 5;
 }
 
 .welcome {
-	margin: 0 auto;
-	display: grid;
-	justify-items: center;
-	width: 55%;
-	height: auto;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    width: 55%;
+    height: auto;
 }
 
 @media only screen and (min-width: 800px) {
-	.forside_produkt:hover .produktudvalg {
-		display: block;
-	}
+    .forside_produkt:hover .produktudvalg {
+        display: block;
+    }
 
-	.forside_om:hover .om_slidedown {
-		display: block;
-	}
+    .forside_om:hover .om_slidedown {
+        display: block;
+    }
 
-	.produktudvalg a {
-		color: #4E4A51;
-	}
+    .produktudvalg a {
+        color: #4E4A51;
+    }
 }
 
 .welcome ul {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 .om_slidedown a {
-	color: #4E4A51;
+    color: #4E4A51;
 }
 
 .logo_forsiden {
-	width: 30%;
-	margin: 0 0 3vw 0;
+    width: 30%;
+    margin: 0 0 3vw 0;
 }
 
 .logo_forside {
-	width: 100%;
+    width: 100%;
 }
 
 .index_text {
-	font-style: italic;
+    font-style: italic;
 }
 
 footer {
-	display: grid;
-	grid-row: 3/3;
-	grid-template-columns: repeat(12, 8%);
-	grid-gap: 0.37%;
-	background-color: #e4e2e3;
+    display: grid;
+    grid-row: 3/3;
+    grid-template-columns: repeat(12, 8%);
+    grid-gap: 0.37%;
+    background-color: #e4e2e3;
 
 }
 
 footer a {
-	color: #4E4A51;
+    color: #4E4A51;
 }
 
 .some {
-	grid-column: 1/2;
-	margin: 10%;
+    grid-column: 1/2;
+    margin: 10%;
 }
 
 .some img {
-	width: 46%
+    width: 46%
 }
 
 .some img:hover {
-	width: 40%
+    width: 40%
 }
 
 .kontakt_kort {
-	margin-top: 20%;
-	grid-column: 4/4;
+    margin-top: 20%;
+    grid-column: 4/4;
 }
 
 
 
 .krukke {
-	grid-column: 12/12;
-	width: 4vw;
-	margin: 1vw 0 1vw 3vw;
+    grid-column: 12/12;
+    width: 4vw;
+    margin: 1vw 0 1vw 3vw;
 }
 
 footer ul {
-	grid-column: 2/4;
-	margin: 0;
+    grid-column: 2/4;
+    margin: 0;
 }
 
 
 /********     om hanne     **************/
 
 .butik {
-	display: grid;
-	grid-template-columns: repeat(12, 8%);
-	grid-gap: 0.37%;
+    display: grid;
+    grid-template-columns: repeat(12, 8%);
+    grid-gap: 0.37%;
 
 }
 
 .butik_billed {
-	grid-column: span 4;
-	width: 100%;
-	margin: 10px 0;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    grid-column: span 4;
+    width: 100%;
+    margin: 10px 0;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 .butik_stort {
-	grid-column: span 6;
-	width: 100%;
-	margin: 2vw 0 3vw 0;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    grid-column: span 6;
+    width: 100%;
+    margin: 2vw 0 3vw 0;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 
 }
 
 .small_img {
-	grid-column: span 2;
-	width: 100%;
-	height: 200px;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    grid-column: span 2;
+    width: 100%;
+    height: 200px;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 
 
 
 }
 
 .icon_produkt {
-	width: 50%;
-	grid-column: 2/3;
+    width: 50%;
+    grid-column: 2/3;
 
 }
 
 .big_img {
-	grid-column: span 4;
-	width: 100%;
-	height: 200px;
-	margin-bottom: 0.5vw;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    grid-column: span 4;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5vw;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 .butik_text {
-	grid-column: span 6;
-	color: #4E4A51;
-	width: 89%;
-	font-size: 0.8em;
-	line-height: 1.2vw;
+    grid-column: span 6;
+    color: #4E4A51;
+    width: 89%;
+    font-size: 0.8em;
+    line-height: 1.2vw;
 }
 
 .citat {
-	grid-column: 4 / span 8;
-	text-align: left;
-	width: 85%;
-	margin: 0 0 2.2vw 0;
+    grid-column: 4 / span 8;
+    text-align: left;
+    width: 85%;
+    margin: 0 0 2.2vw 0;
 }
 
 .logo_header {
-	width: 2vw;
-	padding: 0.3vw 0 0 0.3vw;
-	grid-column: span 2;
+    width: 2vw;
+    padding: 0.3vw 0 0 0.3vw;
+    grid-column: span 2;
 
 }
 
 
 .footermenu {
-	margin: 5%;
-	text-decoration: none;
+    margin: 5%;
+    text-decoration: none;
 }
 
 .footermenu:hover {
-	font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 
@@ -518,26 +518,26 @@ footer ul {
 /********* kontakt ***************/
 
 .map {
-	grid-column: span 12;
-	width: 100%;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    grid-column: span 12;
+    width: 100%;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 }
 
 /**********   Produkt siden *************/
 
 .produkt_overskrift {
-	grid-column: span 3;
+    grid-column: span 3;
 }
 
 .info {
-	grid-column: span 3;
+    grid-column: span 3;
 }
 
 .enkelt_produkt {
-	width: 50%;
-	margin: 0 auto;
+    width: 50%;
+    margin: 0 auto;
 }
 
 
@@ -545,85 +545,85 @@ footer ul {
 /***********   texture     *************/
 
 ul {
-	margin-top: 80px;
+    margin-top: 80px;
 }
 
 header ul {
 
-	margin: 0 auto;
+    margin: 0 auto;
 
 }
 
 .butik_text p {
-	color: #4E4A51;
-	font-family: 'BookmanOldStyle';
-	font-weight: 100;
-	text-align: left;
-	margin: 0.5vw 0 0 1vw;
+    color: #4E4A51;
+    font-family: 'BookmanOldStyle';
+    font-weight: 100;
+    text-align: left;
+    margin: 0.5vw 0 0 1vw;
 }
 
 a {
-	color: #E4E2E3;
-	font-weight: normal;
+    color: #E4E2E3;
+    font-weight: normal;
 }
 
 header li a {
-	color: #4E4A51;
-	font-size: 0.7em;
+    color: #4E4A51;
+    font-size: 0.7em;
 }
 
 li {
-	display: inline;
-	margin: 75px;
-	font-size: 20px;
-	font-weight: 800;
+    display: inline;
+    margin: 75px;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 .welcome .forside_produkt,
 .forside_om,
 .forside_events {
-	display: inline;
-	margin: 65px;
-	font-size: 1em;
-	font-weight: 100;
+    display: inline;
+    margin: 65px;
+    font-size: 1em;
+    font-weight: 100;
 
 }
 
 .welcome ul {
-	z-index: 100;
+    z-index: 100;
 }
 
 .welcome_index {}
 
 
 h1 {
-	text-align: center;
-	font-size: 2em;
-	color: #E4E2E3;
-	font-family: 'BookmanOldStyle';
-	font-weight: normal;
+    text-align: center;
+    font-size: 2em;
+    color: #E4E2E3;
+    font-family: 'BookmanOldStyle';
+    font-weight: normal;
 }
 
 .navn_index {
 
-	text-align: center;
-	font-size: 3.3em;
-	color: #E4E2E3;
-	font-family: 'BookmanOldStyle';
-	font-weight: normal;
+    text-align: center;
+    font-size: 3.3em;
+    color: #E4E2E3;
+    font-family: 'BookmanOldStyle';
+    font-weight: normal;
 }
 
 #main_content h1 {
 
-	color: #4E4A51;
+    color: #4E4A51;
 
 
 }
 
 .overskrift_om {
-	grid-column: span 12;
-	color: #4E4A51;
-	font-size: 30px;
+    grid-column: span 12;
+    color: #4E4A51;
+    font-size: 30px;
 }
 
 
@@ -631,647 +631,647 @@ h1 {
 
 
 .produkt_hidden p {
-	width: 100%;
-	margin: 0;
+    width: 100%;
+    margin: 0;
 }
 
 p {
-	margin: 2vw 0 0 1vw;
+    margin: 2vw 0 0 1vw;
 }
 
 
 .butik_text h2 {
-	text-align: left;
-	margin-left: 10px;
-	width: 90%;
-	margin-top: 2vw;
+    text-align: left;
+    margin-left: 10px;
+    width: 90%;
+    margin-top: 2vw;
 }
 
 .produkt p,
 .beskrivelse p {
-	color: #4E4A51;
-	text-align: left;
-	font-size: 0.8em;
-	line-height: 1.2vw;
+    color: #4E4A51;
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.2vw;
 }
 
 headermenu {
-	display: block;
+    display: block;
 }
 
 
 .slideshow-container {
-	grid-column: 1/ span 12;
+    grid-column: 1/ span 12;
 
 }
 
 .icon_billede img {
-	height: 1.5vw;
+    height: 1.5vw;
 }
 
 .icon_billede {
-	display: grid;
-	justify-items: center;
+    display: grid;
+    justify-items: center;
 }
 
 .status {
-	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	justify-items: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
 span {
-	color: #4E4A51;
-	width: 89%;
-	font-size: 0.6em;
-	line-height: 1.2vw;
-	width: 100%;
-	text-align: center;
+    color: #4E4A51;
+    width: 89%;
+    font-size: 0.6em;
+    line-height: 1.2vw;
+    width: 100%;
+    text-align: center;
 }
 
 blockquote {
-	font-style: italic;
-	padding: 0.35em 40px;
-	line-height: 1.45;
-	position: relative;
-	color: #E4E2E3;
-	text-align: center;
-	font-size: 0.8em;
-	width: 78%;
-	margin: 3vw 0 0 0
+    font-style: italic;
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #E4E2E3;
+    text-align: center;
+    font-size: 0.8em;
+    width: 78%;
+    margin: 3vw 0 0 0
 }
 
 blockquote:before {
-	display: block;
-	padding-left: 10px;
-	content: "\201C";
-	font-size: 4.5vw;
-	position: absolute;
-	left: -1px;
-	top: -32px;
-	color: #E4E2E3;
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 4.5vw;
+    position: absolute;
+    left: -1px;
+    top: -32px;
+    color: #E4E2E3;
 }
 
 
 blockquote:after {
-	display: block;
-	padding-left: 10px;
-	content: "\201D";
-	font-size: 4.5vw;
-	position: absolute;
-	left: 539px;
-	top: 47px;
-	color: #E4E2E3;
+    display: block;
+    padding-left: 10px;
+    content: "\201D";
+    font-size: 4.5vw;
+    position: absolute;
+    left: 539px;
+    top: 47px;
+    color: #E4E2E3;
 }
 
 
 .titel {
-	margin: 0 0 0 20vw;
-	font-size: 1.5em;
-	color: #E4E2E3;
+    margin: 0 0 0 20vw;
+    font-size: 1.5em;
+    color: #E4E2E3;
 
 
 }
 
 .vase_titel {
-	margin: 0px 0 0 12vw;
-	font-size: 0.7em;
-	color: #4E4A51;
-	grid-column: 4 / span 6;
+    margin: 0px 0 0 12vw;
+    font-size: 0.7em;
+    color: #4E4A51;
+    grid-column: 4 / span 6;
 }
 
 
 .om_hanne_citat {
-	font-style: italic;
-	padding: 0.35em 40px;
-	line-height: 1.45;
-	position: relative;
-	color: #4E4A51;
-	text-align: center;
-	font-size: 0.8em;
-	margin-top: -1%;
+    font-style: italic;
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #4E4A51;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: -1%;
 }
 
 .om_hanne_citat:before {
-	display: block;
-	padding-left: 10px;
-	content: "\201C";
-	font-size: 55px;
-	position: absolute;
-	left: 5px;
-	top: -21px;
-	color: #4E4A51;
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 55px;
+    position: absolute;
+    left: 5px;
+    top: -21px;
+    color: #4E4A51;
 }
 
 .om_hanne_citat:after {
-	display: block;
-	padding-left: 10px;
-	content: "\201D";
-	font-size: 55px;
-	position: absolute;
-	left: 330px;
-	top: 23px;
-	color: #4E4A51;
+    display: block;
+    padding-left: 10px;
+    content: "\201D";
+    font-size: 55px;
+    position: absolute;
+    left: 330px;
+    top: 23px;
+    color: #4E4A51;
 }
 
 
 .butik_citat {
-	font-style: italic;
-	padding: 0.35em 40px;
-	line-height: 1.45;
-	position: relative;
-	color: #4E4A51;
-	text-align: center;
-	font-size: 0.8em;
-	margin-top: -1%;
+    font-style: italic;
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #4E4A51;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: -1%;
 }
 
 .butik_citat:before {
-	display: block;
-	padding-left: 10px;
-	content: "\201C";
-	font-size: 55px;
-	position: absolute;
-	left: 5px;
-	top: -21px;
-	color: #4E4A51;
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 55px;
+    position: absolute;
+    left: 5px;
+    top: -21px;
+    color: #4E4A51;
 }
 
 .butik_citat:after {
-	display: block;
-	padding-left: 10px;
-	content: "\201D";
-	font-size: 55px;
-	position: absolute;
-	left: 278px;
-	top: 33px;
-	color: #4E4A51;
+    display: block;
+    padding-left: 10px;
+    content: "\201D";
+    font-size: 55px;
+    position: absolute;
+    left: 278px;
+    top: 33px;
+    color: #4E4A51;
 }
 
 
 
 
 @media only screen and (max-width: 1200px) {
-	.butik_text {
-		line-height: 1;
+    .butik_text {
+        line-height: 1;
 
-	}
+    }
 
-	.om_hanne_citat {
+    .om_hanne_citat {
 
-		margin-top: 10%;
-	}
+        margin-top: 10%;
+    }
 
-	.kontakt_kort {
-		grid-column: 4/6;
-		margin-top: 0;
-	}
+    .kontakt_kort {
+        grid-column: 4/6;
+        margin-top: 0;
+    }
 }
 
 @media only screen and (max-width: 800px) {
 
-	.homepage {
-		width: 85%;
-	}
-	.kategori,
-	.farve,
-	.str,
-	.materiale,
-	.pris {
-		color: #4E4A51;
-		font-family: 'BookmanOldStyle';
-		font-weight: 100;
-		text-align: left;
-		margin: 0.5vw 0 0 1vw;
-		font-size: 0.8em;
-		line-height: 1;
-	}
+    .homepage {
+        width: 85%;
+    }
+    .kategori,
+    .farve,
+    .str,
+    .materiale,
+    .pris {
+        color: #4E4A51;
+        font-family: 'BookmanOldStyle';
+        font-weight: 100;
+        text-align: left;
+        margin: 0.5vw 0 0 1vw;
+        font-size: 0.8em;
+        line-height: 1;
+    }
 
 
-	.small_img {
-		grid-column: span 6;
-		width: 100%;
-		height: 250px;
-	}
+    .small_img {
+        grid-column: span 6;
+        width: 100%;
+        height: 250px;
+    }
 
-	.big_img {
-		grid-column: span 6;
-		width: 100%;
-		height: 250px;
-	}
+    .big_img {
+        grid-column: span 6;
+        width: 100%;
+        height: 250px;
+    }
 
-	.produkt {
-		grid-column: span 3;
-	}
+    .produkt {
+        grid-column: span 3;
+    }
 
-	.produkter {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-	}
+    .produkter {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-	.butik_stort {
-		grid-column: span 12;
-		width: 100%;
-	}
+    .butik_stort {
+        grid-column: span 12;
+        width: 100%;
+    }
 
 
 
-	.butik_text {
-		grid-column: span 12;
-		color: #4E4A51;
-		width: 100%;
-		margin: 0;
-		margin-top: 5%;
-	}
+    .butik_text {
+        grid-column: span 12;
+        color: #4E4A51;
+        width: 100%;
+        margin: 0;
+        margin-top: 5%;
+    }
 
-	.citat {
-		grid-column: 3 / 11;
-		text-align: center;
-		width: 100%;
-		margin: 50px 0;
+    .citat {
+        grid-column: 3 / 11;
+        text-align: center;
+        width: 100%;
+        margin: 50px 0;
 
 
-	}
+    }
 
-	.some {
-		grid-column: span 3;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
+    .some {
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-	.some img {
-		width: 50%;
-		grid-column: span 1;
-	}
+    .some img {
+        width: 50%;
+        grid-column: span 1;
+    }
 
 
 
-	.footermenu {
-		grid-column: 5/6;
+    .footermenu {
+        grid-column: 5/6;
 
 
-	}
+    }
 
-	.footermenu a {}
+    .footermenu a {}
 
-	.event_billede {
-		grid-column: span 12;
-		-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-		box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    .event_billede {
+        grid-column: span 12;
+        -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
 
-	}
+    }
 
-	.beskrivelse {
-		grid-column: span 10;
-	}
+    .beskrivelse {
+        grid-column: span 10;
+    }
 
-	.enkelt_produkt {
-		width: 100%;
-		margin: 0 auto;
-	}
+    .enkelt_produkt {
+        width: 100%;
+        margin: 0 auto;
+    }
 
 
 
-	.enkelt_produkt .produkt {
-		grid-column: span 3;
+    .enkelt_produkt .produkt {
+        grid-column: span 3;
 
-	}
+    }
 
-	.stortbillede {
-		grid-column: span 3;
-	}
+    .stortbillede {
+        grid-column: span 3;
+    }
 
-	.stortbillede img {
-		width: 100%;
-
-	}
+    .stortbillede img {
+        width: 100%;
+
+    }
 
-	.icon_produkt {
-		width: 50%;
-		grid-column: span 1;
-
-	}
-
-
-	.produkt p {
-		margin: 10px;
-	}
-
-	.produkt img {}
-
-	.produkt_hidden p {
-		width: 90%;
-
-	}
-
-	.lille_billede1 img,
-	.lille_billede2 img,
-	.lille_billede3 img {
-		grid-column: span 1;
-		width: 92%;
-		margin: 5px;
-
-	}
-
-	.billede1,
-	.billede2,
-	.billede3 {
-		width: 100%;
-		-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-		-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-		box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	}
-
-	.billede2 {
-		grid-column: 2/3;
-	}
-
-	.krukke {
-		grid-column: 9/12;
-		width: 11vw;
-	}
-
-	.ikon_status_billede {
-		position: absolute;
-		z-index: 2;
-		width: 13vw;
-		margin-left: 65vw;
-
-	}
-
-	.ikon_status_billede_produkt {
-		position: absolute;
-		z-index: 2;
-		width: 13vw;
-		margin-left: 63vw;
-
-	}
-	blockquote {
-		font-style: italic;
-		padding: 0;
-		line-height: 1.45;
-
-		color: #E4E2E3;
-		text-align: center;
-		font-size: 0.8em;
-		width: 78%;
-		margin: 0;
-	}
-	#wrapper {
-		min-height: 198vw;
-		width: 100vw;
-		grid-template-rows: 4vw auto 10vw;
-
-	}
-
-	blockquote:before {
-		display: block;
-		content: "\201C";
-		font-size: 10.5vw;
-		position: absolute;
-		left: -11px;
-		top: -9px;
-		color: #E4E2E3;
-	}
-
-
-	blockquote:after {
-		display: block;
-		padding-left: 60px;
-		content: "\201D";
-		font-size: 55px;
-		position: absolute;
-		left: 148px;
-		top: 69px;
-		color: #e4e3e2;
-
-	}
-	.om_hanne_citat:after {
-		display: block;
-		padding-left: 10px;
-		content: "\201D";
-		font-size: 55px;
-		position: absolute;
-		left: 174px;
-		top: 69px;
-		color: #4E4A51;
-	}
-
-
-	.welcome {
-
-		height: auto;
-
-	}
-
-	.icon_billede img {
-		height: 10.5vw;
-	}
-
-	.welcome .forside_produkt,
-	.forside_om,
-	.forside_events {
-		margin: 15px;
-		/* margin-top: 23px; */
-		font-size: .8em;
-		font-weight: 100;
-	}
-	.welcome ul {
-		margin-top: 15px;
-		margin-bottom: 15px;
-	}
-
-	.navn_index {
-		margin-top: 5vw;
-		font-size: 2.3em;
-
-	}
-	.logo_forsiden {
-		width: 25%;
-
-	}
-
-
-	.tittel {
-		margin: 2vw 0px 0px 20vw;
-	}
-
-	.krukke {
-		width: 16vw;
-		margin: 0;
-	}
-
-	.butik_text {
-		line-height: 1;
-		margin-top: 5%;
-		font-size: .6em;
-
-	}
-
-	#headermenu {
-		display: none;
-	}
-	.logo_forside {
-		width: 65%;
-		margin-left: 15%;
-	}
-
-	ul {
-		margin-top: 40px;
-	}
-
-	li {
-		display: block;
-		margin: 34px;
-		font-size: 20px;
-		font-weight: 800;
-	}
-
-	nav {
-		display: none;
-	}
-
-	nav {
-		grid-column: span 12;
-	}
-
-	#normalMenu {
-		display: none;
-		background-color: #e4e3e2;
-		margin-top: 5%;
-	}
-
-
-
-	#normalMenu button {
-		text-decoration: none;
-		border: none;
-		z-index: 7;
-		display: block;
-		background-color: transparent;
-		padding: 4px;
-		width: 100%;
-		color: #4E4A51;
-		font-family: 'bookman';
-		font-size: 1.5em;
-		cursor: pointer;
-	}
-
-	.logo_header {
-		display: none;
-	}
-
-	.MenuBackdrop {
-		position: fixed;
-		width: 100vw;
-		background-color: rgba(0, 0, 0, 0.5);
-		z-index: -1;
-	}
-
-	.accordion {
-		text-align: center;
-		position: fixed;
-		top: 0;
-		left: 0;
-		display: block;
-		color: #444;
-		cursor: pointer;
-		margin: 2vw;
-		padding: 2vw;
-		background-color: #4E4A51;
-		height: 30px;
-		width: 30px;
-		text-align: left;
-		border-radius: 5px;
-		outline: none;
-		transition: 0.4s;
-		z-index: 10;
-	}
-
-
-	.bar1,
-	.bar2,
-	.bar3 {
-		width: 30px;
-		height: 3px;
-		background-color: #EDE5DF;
-		margin: 6px 0;
-		transition: 0.4s;
-	}
-
-	.change .bar1 {
-		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-		transform: rotate(-45deg) translate(-9px, 6px);
-	}
-
-	.change .bar2 {
-		opacity: 0;
-	}
-
-	.change .bar3 {
-		-webkit-transform: rotate(45deg) translate(-8px, -8px);
-		transform: rotate(45deg) translate(-8px, -8px);
-	}
-
-	p {
-		margin-top: 30px;
-		text-align: center;
-		width: 100%;
-	}
-
-	.butik_text p,
-	h2 {
-
-		width: 100%;
-	}
-
-	#main_content {
-		width: 80%;
-		margin: 2vw auto;
-	}
-
-	header {
-		background-color: transparent;
-		grid-row: 1/1;
-		width: 100vw;
-		height: 35px;
-		display: grid;
-		grid-template-columns: repeat(12, 8.3%);
-		position: fixed;
-	}
+    .icon_produkt {
+        width: 50%;
+        grid-column: span 1;
+
+    }
+
+
+    .produkt p {
+        margin: 10px;
+    }
+
+    .produkt img {}
+
+    .produkt_hidden p {
+        width: 90%;
+
+    }
+
+    .lille_billede1 img,
+    .lille_billede2 img,
+    .lille_billede3 img {
+        grid-column: span 1;
+        width: 92%;
+        margin: 5px;
+
+    }
+
+    .billede1,
+    .billede2,
+    .billede3 {
+        width: 100%;
+        -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    }
+
+    .billede2 {
+        grid-column: 2/3;
+    }
+
+    .krukke {
+        grid-column: 9/12;
+        width: 11vw;
+    }
+
+    .ikon_status_billede {
+        position: absolute;
+        z-index: 2;
+        width: 13vw;
+        margin-left: 65vw;
+
+    }
+
+    .ikon_status_billede_produkt {
+        position: absolute;
+        z-index: 2;
+        width: 13vw;
+        margin-left: 63vw;
+
+    }
+    blockquote {
+        font-style: italic;
+        padding: 0;
+        line-height: 1.45;
+
+        color: #E4E2E3;
+        text-align: center;
+        font-size: 0.8em;
+        width: 78%;
+        margin: 0;
+    }
+    #wrapper {
+        min-height: 198vw;
+        width: 100vw;
+        grid-template-rows: 4vw auto 10vw;
+
+    }
+
+    blockquote:before {
+        display: block;
+        content: "\201C";
+        font-size: 10.5vw;
+        position: absolute;
+        left: -11px;
+        top: -9px;
+        color: #E4E2E3;
+    }
+
+
+    blockquote:after {
+        display: block;
+        padding-left: 60px;
+        content: "\201D";
+        font-size: 55px;
+        position: absolute;
+        left: 148px;
+        top: 69px;
+        color: #e4e3e2;
+
+    }
+    .om_hanne_citat:after {
+        display: block;
+        padding-left: 10px;
+        content: "\201D";
+        font-size: 55px;
+        position: absolute;
+        left: 174px;
+        top: 69px;
+        color: #4E4A51;
+    }
+
+
+    .welcome {
+
+        height: auto;
+
+    }
+
+    .icon_billede img {
+        height: 10.5vw;
+    }
+
+    .welcome .forside_produkt,
+    .forside_om,
+    .forside_events {
+        margin: 15px;
+        /* margin-top: 23px; */
+        font-size: .8em;
+        font-weight: 100;
+    }
+    .welcome ul {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .navn_index {
+        margin-top: 5vw;
+        font-size: 2.3em;
+
+    }
+    .logo_forsiden {
+        width: 25%;
+
+    }
+
+
+    .tittel {
+        margin: 2vw 0px 0px 20vw;
+    }
+
+    .krukke {
+        width: 16vw;
+        margin: 0;
+    }
+
+    .butik_text {
+        line-height: 1;
+        margin-top: 5%;
+        font-size: .6em;
+
+    }
+
+    #headermenu {
+        display: none;
+    }
+    .logo_forside {
+        width: 65%;
+        margin-left: 15%;
+    }
+
+    ul {
+        margin-top: 40px;
+    }
+
+    li {
+        display: block;
+        margin: 34px;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav {
+        grid-column: span 12;
+    }
+
+    #normalMenu {
+        display: none;
+        background-color: #e4e3e2;
+        margin-top: 5%;
+    }
+
+
+
+    #normalMenu button {
+        text-decoration: none;
+        border: none;
+        z-index: 7;
+        display: block;
+        background-color: transparent;
+        padding: 4px;
+        width: 100%;
+        color: #4E4A51;
+        font-family: 'bookman';
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .logo_header {
+        display: none;
+    }
+
+    .MenuBackdrop {
+        position: fixed;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+    .accordion {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        color: #444;
+        cursor: pointer;
+        margin: 2vw;
+        padding: 2vw;
+        background-color: #4E4A51;
+        height: 30px;
+        width: 30px;
+        text-align: left;
+        border-radius: 5px;
+        outline: none;
+        transition: 0.4s;
+        z-index: 10;
+    }
+
+
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 30px;
+        height: 3px;
+        background-color: #EDE5DF;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .bar2 {
+        opacity: 0;
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    p {
+        margin-top: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .butik_text p,
+    h2 {
+
+        width: 100%;
+    }
+
+    #main_content {
+        width: 80%;
+        margin: 2vw auto;
+    }
+
+    header {
+        background-color: transparent;
+        grid-row: 1/1;
+        width: 100vw;
+        height: 35px;
+        display: grid;
+        grid-template-columns: repeat(12, 8.3%);
+        position: fixed;
+    }
 }
 
 .mockup_billede {
-	z-index: 200;
-	position: fixed;
-	height: 90vh;
-	width: 90vw;
-	background-color: white;
-	left: 4.5%;
-	top: 5%;
-	-webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
-	padding: 10px;
-	display: none;
+    z-index: 200;
+    position: fixed;
+    height: 90vh;
+    width: 90vw;
+    background-color: white;
+    left: 4.5%;
+    top: 5%;
+    -webkit-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 16px -5px rgba(0, 0, 0, 0.75);
+    padding: 10px;
+    display: none;
 }
 
 .mockup_billede_img {
-	margin-top: 14%;
-	width: 100%;
+    margin-top: 14%;
+    width: 100%;
 }
 
 .leave_button {
-	width: 3%;
-	float: right;
+    width: 3%;
+    float: right;
 }
 
 .buttons a {
-	text-align: center;
-	color: #4E4A51;
-	display: block;
-	font-size: 1.2em;
-	margin: 10px 0;
+    text-align: center;
+    color: #4E4A51;
+    display: block;
+    font-size: 1.2em;
+    margin: 10px 0;
 }
