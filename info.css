@@ -65,7 +65,7 @@
 }
 
 .info_text {
-	font-size: 0.5em;
+	font-size: 0.7em;
 	margin: 0 15px;
 	grid-column: 2/3;
 	width: 150%;
@@ -202,5 +202,6 @@
 	width: 310%;
 	margin-left: -112%;
 	transform: rotate(5deg);
+	margin-top: -74%;
 
 }
